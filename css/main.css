@@ -304,3 +304,6 @@ body {
   -o-animation-name: fadeInUp;
   animation-name: fadeInUp;
   }
+
+.edu col-lg-6{  display:block;margin:10px;  }
+.edu col-lg-3{  display:block;float:right;width:50%;margin-left:10px;  }
