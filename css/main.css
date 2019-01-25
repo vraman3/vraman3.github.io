@@ -202,6 +202,38 @@ a:after {
 .work ul {
   padding-left: 10px
 }
+
+.project {
+  padding-top: 50px;
+}
+
+.project p {
+  color: #2f2f2f;
+}
+
+.project t {
+  color: #34495e;
+  font-weight: 700;
+}
+
+.project company {
+  color: #34495e
+}
+
+.project imp {
+  padding: 6px;
+  color: white;
+  background: #34495e;
+}
+
+.project more {
+  color: #616669;
+}
+
+.project ul {
+  padding-left: 10px
+}
+
 sm {
   font-size: 12px;
 }
