@@ -100,8 +100,19 @@ a:after {
   color: white;
 }
 
-.header h3 a {
+.header a {
   color: #fff;
+}
+
+.header h5, p {
+  color: white;
+}
+
+.header i {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  padding-right: 8px;
+  vertical-align: middle;
 }
 
 /* About Wrap */
@@ -122,6 +133,9 @@ a:after {
   padding-right: 8px;
   vertical-align: middle;
 }
+
+
+
 
 .footer {
   background: #2f2f2f;
