@@ -186,6 +186,37 @@ a:after {
   color: #616669;
 }
 
+.thesis {
+  padding-top: 50px;
+}
+
+.thesis p {
+  color: #2f2f2f;
+}
+
+.thesis t {
+  color: #34495e;
+  font-weight: 700;
+}
+
+.thesis company {
+  color: #34495e
+}
+
+.thesis imp {
+  padding: 6px;
+  color: white;
+  background: #34495e;
+}
+
+.thesis more {
+  color: #616669;
+}
+
+.thesis ul {
+  padding-left: 10px
+}
+
 .work {
   padding-top: 50px;
 }
