@@ -6,6 +6,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
+    <script type="text/javascript" src="js/jquery.ba-hashchange.js"></script>
+    <script type="text/javascript" src="js/jquery.easytabs.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
     <script src="js/external.js"></script>
     <!-- OPTIONAL: description -->
     <meta name="description" content="Personal website" />
@@ -54,28 +58,65 @@
         </div>
         <div class="row centered">
           <div class="col-lg-12">
-            <a href="https://github.com/vraman3/vraman3.github.io/blob/master/Vishwanath_Raman_Resume.pdf"
-                        target="_blank"><i class="icon-file"></i>
-                        <md>Resume</md>
-                    </a>
+            <a
+              href="https://github.com/vraman3/vraman3.github.io/blob/master/Vishwanath_Raman_Resume.pdf"
+              target="_blank"
+              ><i class="icon-file"></i>
+              <md>Resume</md>
+            </a>
 
             <!--<a href="tdi.html" target="_blank">The Data Incubator</a>-->
           </div>
-        </div>
-
-        <div class="topnav">
-            <a class="active" href="#home">Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
         </div>
         <!--/.row-->
       </div>
       <!--/.container-->
     </div>
-    <!--/.#headerwrap-->
 
-    
+    <!-- Content -->
+    <div id="content">
+      <!-- Navigation -->
+      <div class="navigation">
+        <ul class="tabs">
+          <li><a href="#welcome" class="tab-welcome">Welcome</a></li>
+          <li><a href="#about" class="tab-about">About</a></li>
+          <li><a href="#portfolio" class="tab-portfolio">Projects</a></li>
+          <li><a href="#contact" class="tab-contact">Contact</a></li>
+        </ul>
+      </div>
+      <!-- /Navigation -->
+
+      <!-- Welcome -->
+      <div id="welcome">
+        <img src="plot_1.png" alt="" />
+      </div>
+      <!-- /Welcome -->
+
+      <!-- About -->
+      <div id="about">
+        <p>
+          Hey there! I am a software developer interested in computational
+          biology, machine learning, graphics programming, medical devices and
+          the healthcare industry, and hardware development.<br /><br />
+
+          I have experience with a wide variety of programming languages. My
+          most comfortable language is C++. Professionally I have used C# WPF
+          the most. For my research projects I have extensively used Matlab and
+          Python. Currently I am teaching myself JavaScript along with HTML/CSS
+          to develop my website.
+        </p>
+      </div>
+      <!-- /About -->
+
+      <!-- Portfolio -->
+      <div id="portfolio">
+            <img src="plot_2.png" alt="" />
+      </div>
+      <!-- /Portfolio-->
+
+      
+    </div>
+    <!--/Content-->
 
     <section id="contact" name="contact"></section>
     <!--FOOTER DESCRIPTION -->
