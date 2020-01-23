@@ -156,7 +156,7 @@ a:after {
 }*/
 
 /* ------------------------------------------------------------------------------- */
-/*  4.  Welcome Section
+/*  .  Welcome Section
 /* ------------------------------------------------------------------------------- */
 
 #welcome {
@@ -174,7 +174,9 @@ a:after {
 }
 
 
-/* Header Wrap */
+/* ------------------------------------------------------------------------------- */
+/*  .  Header Section
+/* ------------------------------------------------------------------------------- */
 .header {
   background: #1CBCAD;
   background: url(../images/header-bg.jpg) no-repeat center top;
@@ -223,7 +225,9 @@ a:after {
   vertical-align: middle;
 }
 
-/* About Wrap */
+/* ------------------------------------------------------------------------------- */
+/*  .  About Section
+/* ------------------------------------------------------------------------------- */
 .about {
   background: #2c3e50;
   padding-top: 60px;
@@ -242,9 +246,9 @@ a:after {
   vertical-align: middle;
 }
 
-
-
-
+/* ------------------------------------------------------------------------------- */
+/*  .  Footer Section
+/* ------------------------------------------------------------------------------- */
 .footer {
   background: #2f2f2f;
   padding-top: 50px;
@@ -269,8 +273,9 @@ a:after {
   /*color: #1abc9c;*/
 }
 
-/* Global Values */
-
+/* ------------------------------------------------------------------------------- */
+/*  .  Global Section
+/* ------------------------------------------------------------------------------- */
 .desc {
   padding-top: 50px;
 }
@@ -398,126 +403,5 @@ sm {
 .container .row p.tight {
   margin-bottom: 10px;
 }
-
-/* define some CSS3 animations: */
-body {
-  /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
-  -webkit-backface-visibility: hidden;
-}
-
-.animated {
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0; 
-  }
-
-  100% {
-    opacity: 1; 
-  }
-}
-
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  } 
-}
-
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  -moz-animation-name: fadeIn;
-  -o-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
-
-/* 1 */
-@-webkit-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-  }
-}
-
-@-moz-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -moz-transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    -moz-transform: translateY(0);
-  }
-}
-
-@-o-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -o-transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    -o-transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  -moz-animation-name: fadeInUp;
-  -o-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-  }
-
 
   

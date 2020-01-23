@@ -1,25 +1,23 @@
 $(document).ready(function() { 
 
-    /* --------------------------------------------------------------------------- */
-    /*  Easytabs
-    /* --------------------------------------------------------------------------- */
-
-    var $content            = $("#content");
-
-    $content.easytabs({
-        tabs                :"> .navigation > ul > li",
-        animate             : true,
-        updateHash          : true,
-        animationSpeed      :'normal',
+    $(".tab-welcome").click(function() {
+    
+        $("#welcome").toggle();
+    
+    }); 
+    
+    $(".tab-about").click(function() {
+    
+        $("#about").toggle();
+    
     });
-    /* /Easytabs ----------------------------------------------------------------- */
 
+    $(".tab-portfolio").click(function() {
     
+        $("#portfolio").toggle();
+    
+    });
+       
 
 });
 
-$('.tab-welcome').click(function() {
-    
-    $('#about').css('display', 'none');
-
-});
