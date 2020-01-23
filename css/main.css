@@ -147,10 +147,22 @@ a:after {
 }
 
 .content-div {
+  display: none;
+}
+.content-div.showing {
   transition: opacity .5s ease-out;
   -moz-transition: opacity .5s ease-out;
   -webkit-transition: opacity .5s ease-out;
   -o-transition: opacity .5s ease-out;
+  display: block;
+}
+
+.content-div.hiding {
+  transition: opacity .5s ease-out;
+  -moz-transition: opacity .5s ease-out;
+  -webkit-transition: opacity .5s ease-out;
+  -o-transition: opacity .5s ease-out;
+  display: none;
 }
 
 /* ------------------------------------------------------------------------------- */
