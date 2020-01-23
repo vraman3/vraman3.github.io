@@ -115,7 +115,8 @@ a:after {
 }
 
 .navigation ul {
-  display: block;
+  margin-top: 14px;
+  display: inline-block;
   list-style: none;
 }
 .navigation ul li {
