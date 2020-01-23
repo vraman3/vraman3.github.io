@@ -118,14 +118,14 @@ a:after {
   display: block;
   list-style: none;
 }
-.navigation .tabs li {
+.navigation ul li {
   width: 106px;
   float: left;
   margin-left: 2px;
   border: 1px solid #000;
 }
 
-.navigation .tabs li a {
+.navigation ul li a {
   display: block;
   padding: 3px;
   text-decoration: none;
@@ -138,55 +138,6 @@ a:after {
   background-color: #009;
   color: #fff;
 }
-
-
-/*
-.navigation {
-  height: 123px;
-  position: relative;
-  text-align: center;
-}
-.tabs {
-  margin-top: 12px;
-  display: inline-block;
-}
-.tabs li {
-  float: left;
-  margin: 0 2px;
-}
-.tabs li > a {
-  width: 106px;
-  height: 26px;
-  padding-top: 45px;
-  display: block;
-  font-size: 15px;
-  font-weight: 600;
-  color: #6a4a16;
-  text-decoration: none;
-}
-.tabs li a:hover {
-  background-color: rgba(122, 70, 9, 0.15);
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-  -webkit-box-shadow: 0 1px 3px rgba(59, 31, 0, 0.4) inset, 0 1px 1px rgba(255, 255, 255, 0.35);
-     -moz-box-shadow: 0 1px 3px rgba(59, 31, 0, 0.4) inset, 0 1px 1px rgba(255, 255, 255, 0.35);
-          box-shadow: 0 1px 3px rgba(59, 31, 0, 0.4) inset, 0 1px 1px rgba(255, 255, 255, 0.35);
-}
-.tabs li.active {
-  background: -moz-linear-gradient(top, rgba(218, 169, 104, 0.45) 0%, rgba(122, 70, 9, 0.45) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(218, 169, 104, 0.45)), color-stop(100%, rgba(122, 70, 9, 0.45)));
-  background: -webkit-linear-gradient(top, rgba(218, 169, 104, 0.45) 0%, rgba(122, 70, 9, 0.45) 100%);
-  background: -o-linear-gradient(top, rgba(218, 169, 104, 0.45) 0%, rgba(122, 70, 9, 0.45) 100%);
-  background: -ms-linear-gradient(top, rgba(218, 169, 104, 0.45) 0%, rgba(122, 70, 9, 0.45) 100%);
-  background: linear-gradient(top, rgba(218, 169, 104, 0.45) 0%, rgba(122, 70, 9, 0.45) 100%);
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-  -webkit-box-shadow: 0 1px 3px rgba(59, 31, 0, 0.8) inset, 0 1px 1px rgba(255, 255, 255, 0.35);
-     -moz-box-shadow: 0 1px 3px rgba(59, 31, 0, 0.8) inset, 0 1px 1px rgba(255, 255, 255, 0.35);
-          box-shadow: 0 1px 3px rgba(59, 31, 0, 0.8) inset, 0 1px 1px rgba(255, 255, 255, 0.35);
-}*/
 
 /* ------------------------------------------------------------------------------- */
 /*  .  Content Section
