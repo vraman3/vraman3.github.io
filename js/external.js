@@ -37,6 +37,11 @@ $(document).ready(function() {
     var slideIndex = 1;
     showSlides(slideIndex);
 
+    $('.prev').click(currentSlide(-1));
+    $('#nextSlide').click(currentSlide(1));
+
+    $('.dots').click(currentSlide(1));
+
     // Next/previous controls
     function plusSlides(n) {
         showSlides(slideIndex += n);
@@ -67,7 +72,7 @@ $(document).ready(function() {
         }
 
         slidesClass[slideIndex-1].style.display = "block";
-        dot[slideIndex-1].className += "active";
+        /*dot[slideIndex-1].className += "active";*/
 
     }
 
