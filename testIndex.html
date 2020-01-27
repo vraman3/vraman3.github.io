@@ -21,12 +21,10 @@
     <!--<script type="text/javascript" src="js/jquery.ba-hashchange.js"></script>-->
     <!--<script type="text/javascript" src="js/jquery.easytabs.min.js"></script>-->
     <!--<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>-->
-    
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
-
 
     <!-- Link the main.css stylesheet -->
     <link href="css/main.css" rel="stylesheet" />
@@ -41,7 +39,6 @@
       href="css/raleway-v12-latin-regular.css"
       type="text/css"
     />
-
 
     <!-- OPTIONAL: Google Fonts (don't forget to edit main.css also)
     <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
@@ -78,8 +75,7 @@
       </div>
       <!--/.container-->
     </div>
-    
-    
+
     <!-- Navigation -->
     <nav class="navigation">
       <ul class="tabs">
@@ -90,56 +86,85 @@
       </ul>
     </nav>
     <!-- /Navigation -->
-    
+
     <!-- Content -->
     <div id="content">
-      
-      
 
       <!-- Welcome -->
       <div class="content-div" id="welcome">
         <div id="slideshow">
-          <div class="slides">
-            <img src="http://4.bp.blogspot.com/-euzhczyVauA/VVawUfF_KHI/AAAAAAAAAFo/8M6AGJq3HC8/s1600/Ward_Lmax1000.jpg"
-                  width="640" height="480">
+          <div class="slides fade">
+            <img
+              src="http://4.bp.blogspot.com/-euzhczyVauA/VVawUfF_KHI/AAAAAAAAAFo/8M6AGJq3HC8/s1600/Ward_Lmax1000.jpg"
+              width="640"
+              height="480"
+            />
             <div class="text">Tone Reproduction</div>
           </div>
-          <div class="slides">
-            <img src="https://raw.githubusercontent.com/vraman3/AvatarProjection_Visual_Only/master/IMG_0777.JPG" width="640" height="480">
+
+          <div class="slides fade">
+            <img
+              src="https://raw.githubusercontent.com/vraman3/AvatarProjection_Visual_Only/master/IMG_0777.JPG"
+              width="640"
+              height="480"
+            />
             <div class="text">The Big Head Project</div>
           </div>
-          <div class="slides">
-            <img src="C:\Users\Vishwanath\Documents\GitHub\HDRProject\hdr-unity-ind-study\Project Screenshots\FinalScene05.png" width="640" height="480">
+
+          <div class="slides fade">
+            <img
+              src="C:\Users\Vishwanath\Documents\GitHub\HDRProject\hdr-unity-ind-study\Project Screenshots\FinalScene05.png"
+              width="640"
+              height="480"
+            />
             <div class="text">HDR Independent Study</div>
           </div>
-          <div class="slides">
-            <img src="C:\Users\Vishwanath\Documents\GitHub\HDRProject\hdr-unity-ind-study\Project Screenshots\FinalScene02.png" width="640" height="480">
+
+          <div class="slides fade">
+            <img
+              src="C:\Users\Vishwanath\Documents\GitHub\HDRProject\hdr-unity-ind-study\Project Screenshots\FinalScene02.png"
+              width="640"
+              height="480"
+            />
             <div class="text">HDR Independent Study</div>
           </div>
-       </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
       </div>
       <!-- /Welcome -->
 
       <!-- About -->
       <div class="content-div" id="about">
-        <p>Hey there! I am a software developer interested in computational biology, machine learning,
-          graphics programming, medical devices and the healthcare industry, and hardware development.<br /><br />
+        <p>
+          Hey there! I am a software developer interested in computational
+          biology, machine learning, graphics programming, medical devices and
+          the healthcare industry, and hardware development.<br /><br />
 
-          I have experience with a wide variety of programming languages. My most comfortable language is
-          C++. Professionally I have used C# WPF the most. For my research projects I have extensively
-          used Matlab and Python. Currently I am teaching myself JavaScript along with HTML/CSS to
-          develop my website.
-      </p>
+          I have experience with a wide variety of programming languages. My
+          most comfortable language is C++. Professionally I have used C# WPF
+          the most. For my research projects I have extensively used Matlab and
+          Python. Currently I am teaching myself JavaScript along with HTML/CSS
+          to develop my website.
+        </p>
       </div>
       <!-- /About -->
 
       <!-- Portfolio -->
       <div class="content-div" id="portfolio">
-            <img src="plot_2.png" alt="Image 2"/>
+        <img src="plot_2.png" alt="Image 2" />
       </div>
       <!-- /Portfolio-->
-
-      
     </div>
     <!--/Content-->
 
