@@ -170,9 +170,93 @@ a:after {
 /*  .  Welcome Section
 /* ------------------------------------------------------------------------------- */
 
+.clear {clear: both;}
+
+.carousel-container {
+  width: 600px;
+  height: 360px;
+  float: left;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.right-arrow {
+  width: 10px;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+
+.left-arrow{
+  width: 10px;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+
+.carousel-image-holder{
+  height:360px;
+  width: 2400px;
+  margin: 0;
+  padding: 0;
+  
+  z-index: 1;
+}
+
+.carousel-image-holder img{
+  width: 600px;
+  /*float: left;*/
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.carousel-buttons-container{
+  width: 600px;
+  text-align: center;
+  margin: 15px 0 0 0;
+  padding: 0;
+}
+
+.carousel-dots{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-buttons{
+  background-color: #dddddd;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 10px 0 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.carousel-buttons:last-of-type{
+  margin: 0;
+}
+
+.active{
+  background-color: #e67e22;
+}
+/* w3schools version */
 /*/* {box-sizing:border-box}*/
 
 #welcome {
+  position: static;
   overflow: hidden;
 }
 

@@ -92,54 +92,35 @@
 
       <!-- Welcome -->
       <div class="content-div" id="welcome">
-        <div id="slideshow">
-          <div class="slides">
-            <img
-              src="http://4.bp.blogspot.com/-euzhczyVauA/VVawUfF_KHI/AAAAAAAAAFo/8M6AGJq3HC8/s1600/Ward_Lmax1000.jpg"
-              width="640"
-              height="480"
-            />
-            <div class="text">Tone Reproduction</div>
-          </div>
 
-          <div class="slides">
-            <img
-              src="https://raw.githubusercontent.com/vraman3/AvatarProjection_Visual_Only/master/IMG_0777.JPG"
-              width="640"
-              height="480"
-            />
-            <div class="text">The Big Head Project</div>
-          </div>
-
-          <div class="slides">
-            <img
-              src="C:\Users\Vishwanath\Documents\GitHub\HDRProject\hdr-unity-ind-study\Project Screenshots\FinalScene05.png"
-              width="640"
-              height="480"
-            />
-            <div class="text">HDR Independent Study 1</div>
-          </div>
-
-          <div class="slides">
-            <img
-              src="C:\Users\Vishwanath\Documents\GitHub\HDRProject\hdr-unity-ind-study\Project Screenshots\FinalScene02.png"
-              width="640"
-              height="480"
-            />
-            <div class="text">HDR Independent Study 2</div>
-          </div>
-
+        <div id="carousel-container">
           <!-- Next and previous buttons -->
-          <a class="prev" id="prevSlide">&#10094;</a>
-          <a class="next" id="nextSlide">&#10095;</a>
+          <div class="left-arrow"></div>
+          <div class="right-arrow"></div>
+
+          <div class="carousel-image-holder">
+            <img src="http://4.bp.blogspot.com/-euzhczyVauA/VVawUfF_KHI/AAAAAAAAAFo/8M6AGJq3HC8/s1600/Ward_Lmax1000.jpg" 
+            style="display: inline-block; position: absolute;"/>
+            
+            <img src="https://raw.githubusercontent.com/vraman3/AvatarProjection_Visual_Only/master/IMG_0777.JPG"/>
+            
+            <img src="C:\Users\Vishwanath\Documents\GitHub\HDRProject\hdr-unity-ind-study\Project Screenshots\FinalScene05.png"/>
+            
+            <img src="C:\Users\Vishwanath\Documents\GitHub\HDRProject\hdr-unity-ind-study\Project Screenshots\FinalScene02.png"/>
+            
+          </div>
+
+          
+
+          <!--<a class="prev" id="prevSlide">&#10094;</a>
+          <a class="next" id="nextSlide">&#10095;</a> -->
         </div>
 
+        <div class="clear"></div>
+
         <!-- The dots/circles -->
-        <div style="text-align:center">
-          <span class="dotsa" id="1"></span>
-          <span class="dotsa" id="2"></span>
-          <span class="dotsa" id="3"></span>
-          <span class="dotsa" id="4"></span>
+        <div class="carousel-buttons-container">
+          <ul id="carousel-dots"></ul>
         </div>
 
       </div>
