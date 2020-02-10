@@ -85,20 +85,35 @@ $(document).ready(function () {
         if (findTheNumb == 1) {
             $(".left-arrow").hide();
             $(".right-arrow").show();
+
+            // $(".individualImage").show();
+            firstImg = document.getElementsByClassName("carousel-image-holder");
+            firstImg[1].show();
         } else if (findTheNumb == numImgs) {
             $(".right-arrow").hide();
             $(".left-arrow").show();
+
+            // $(".individualImage").show();
+            // firstImg = document.getElementsByClassName("individualImage");
+            // firstImg[1].show();
         } else {
             $(".right-arrow").show();
             $(".left-arrow").show();
+
+            // $(".individualImage").show();
         }
+
+         //.style.display = "inline-block";
+    
     });
 
 
     $(".carousel-buttons-container").find("li").first().addClass("active");
-    firstImg = document.getElementsByClassName("carousel-image-holder");
-    firstImg[1].style.display = "block";
+
+    //firstImg = document.getElementsByClassName("carousel-image-holder");
+    //firstImg[1].style.display = "inline-block";
     
+
     $(".right-arrow").click(function () {
 
         if (clicked < imgCount) {

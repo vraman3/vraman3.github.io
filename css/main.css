@@ -170,7 +170,7 @@ a:after {
 /*  .  Welcome Section
 /* ------------------------------------------------------------------------------- */
 
-.clear {clear: both;}
+/*.clear {clear: both;}*/
 
 .carousel-container {
   width: 600px;
@@ -218,6 +218,22 @@ a:after {
   /*float: left;*/
   margin: 0;
   padding: 0;
+  display: none;
+}
+
+.individualImage.showing {
+  transition: opacity .5s ease-out;
+  -moz-transition: opacity .5s ease-out;
+  -webkit-transition: opacity .5s ease-out;
+  -o-transition: opacity .5s ease-out;
+  display: block;
+}
+
+.individualImage.hiding {
+  transition: opacity .5s ease-out;
+  -moz-transition: opacity .5s ease-out;
+  -webkit-transition: opacity .5s ease-out;
+  -o-transition: opacity .5s ease-out;
   display: none;
 }
 
