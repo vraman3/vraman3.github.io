@@ -56,7 +56,7 @@ $(document).ready(function () {
         for (var i = 0; i < numImgs; i++) {
             var li = document.createElement("li");
             li.setAttribute("class", "carousel-buttons");
-            li.setAttribute("id", "carousel" + addId);
+            li.setAttribute("id", "carousel" + (i+1) );
 
             ul.appendChild(li);
             //$("ul carousel-dots").prepend('<li class="carousel-buttons" id="carousel' + addId + '"></li>');
@@ -67,9 +67,19 @@ $(document).ready(function () {
     }
 
     
+
     $(".carousel-buttons").click(function () {
 
+        // window.addEventListener('load', function () {
+        //     var eles = document.getElementsByClassName("carousel-image-holder");
+        //     console.log(eles);
+        //     console.log(eles.length);
+        //     console.log(eles[0]);
+        // })
+
         var findIdClicked = $(this).attr("id");
+
+        //console.log(findIdClicked);
 
         var splitString = findIdClicked.split("carousel")
         var findTheNumb = splitString[1];
@@ -87,8 +97,13 @@ $(document).ready(function () {
             $(".right-arrow").show();
 
             // $(".individualImage").show();
-            firstImg = document.getElementsByClassName("carousel-image-holder");
-            firstImg[1].show();
+            var firstImg = document.getElementsByClassName("carousel-image-holder");
+            var actualFirstImg = firstImg.item(0).getElementsByTagName("img")[0];
+
+            actualFirstImg.style.display = "inline-block";
+            console.log(firstImg.item(0).getElementsByTagName("img")[0]); //.firstChild.setAttribute("display", "inline-block"));
+
+            //firstImg[1].show();
         } else if (findTheNumb == numImgs) {
             $(".right-arrow").hide();
             $(".left-arrow").show();
