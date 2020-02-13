@@ -216,7 +216,7 @@ a:after {
   -moz-transition: opacity .5s ease-out;
   -webkit-transition: opacity .5s ease-out;
   -o-transition: opacity .5s ease-out;
-  display: block;
+  display: inline-block;
 }
 
 .individualImage.hiding {
