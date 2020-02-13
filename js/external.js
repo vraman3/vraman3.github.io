@@ -102,7 +102,8 @@ $(document).ready(function () {
         // Get the current image handle
         var currentImg = "#" + imgContainerHandle.getElementsByTagName("img")[findTheNumb - 1].getAttribute("id");
 
-        //$('.individualImage:not(' + )
+        $('.individualImage:not(' + currentImg + ')').removeClass("showing").addClass("hiding");
+        
         console.log(currentImg);
         $(currentImg).removeClass("hiding").addClass("showing");
 
