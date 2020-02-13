@@ -145,9 +145,11 @@ a:after {
 /* ------------------------------------------------------------------------------- */
 #content {
   background-color: tan;
+  
 }
 
 .content-div {
+  
   display: none;
 }
 .content-div.showing {
@@ -180,43 +182,31 @@ a:after {
   padding: 0;
   position: relative;
   overflow: hidden;
-}
-
-.right-arrow {
-  width: 10px;
-  height: 100%;
-  background-color: rgba(0,0,0,.5);
-  position: absolute;
-  right: 0;
-  margin: 0;
-  padding: 0;
-  z-index: 2;
-}
-
-.left-arrow{
-  width: 10px;
-  height: 100%;
-  background-color: rgba(0,0,0,.5);
-  position: absolute;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  z-index: 2;
+  text-align: center;
 }
 
 .carousel-image-holder{
-  height:360px;
-  width: 2400px;
-  margin: 0;
+  /*height:360px;
+  width: 2400px;*/
+  height: 480px;
+  width: 640px;
+  position: relative;
+  left: 30%;
+  right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: auto;
   padding: 0;
-  
+  display: inline-block;
   z-index: 1;
+  background-color: #009;
 }
 
 .carousel-image-holder img{
-  width: 600px;
+  width: 640px;
   /*float: left;*/
-  margin: 0;
+  margin: auto auto;
+  vertical-align: middle;
   padding: 0;
   display: none;
 }
@@ -263,6 +253,28 @@ a:after {
 
 .carousel-buttons:last-of-type{
   margin: 0;
+}
+
+.right-arrow {
+  width: 10px;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+
+.left-arrow{
+  width: 10px;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
 }
 
 .active{
