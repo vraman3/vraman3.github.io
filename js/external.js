@@ -22,11 +22,7 @@ $(document).ready(function () {
 
         var currentAttributeValue = $(this).attr('href');
 
-        console.log(currentAttributeValue);
-
         var currentItem = $(currentAttributeValue);
-
-        console.log(currentItem);
 
         if (currentItem.hasClass('showing')) {
             currentItem.removeClass('showing').addClass('hiding');
@@ -96,21 +92,21 @@ $(document).ready(function () {
         // Get the handle for the container having all the images
         var imgContainerHandle = document.getElementsByClassName("carousel-image-holder").item(0);
 
-        console.log(imgContainerHandle);
-        console.log(imgContainerHandle.getElementsByTagName("img")[findTheNumb - 1]);
+        //console.log(imgContainerHandle);
+        //console.log(imgContainerHandle.getElementsByTagName("img")[findTheNumb - 1]);
         
         // Get the current image handle
         var currentImg = "#" + imgContainerHandle.getElementsByTagName("img")[findTheNumb - 1].getAttribute("id");
 
         $('.individualImage:not(' + currentImg + ')').removeClass("showing").addClass("hiding");
         
-        console.log(currentImg);
+        //console.log(currentImg);
         $(currentImg).removeClass("hiding").addClass("showing");
 
 
         //#(".individualImage:not")
         //$(".carousel-image-holder").animate({ "left": -(600 * adjustNumberforSlide) + "px" });
-        console.log(clicked);
+        //console.log(clicked);
 
         // $('.content-div:not(' + currentAttributeValue + ')').removeClass('showing').addClass('hiding');
 
