@@ -34,13 +34,9 @@ $(document).ready(function () {
         $('.content-div:not(' + currentAttributeValue + ')').removeClass('showing').addClass('hiding');
     })
 
-    //$(".left-arrow").hide();
     var numImgs = $('div.carousel-image-holder img').length;
 
     var addId = numImgs;
-
-
-
     if (numImgs == 2) {
         var clicked = 0;
         imgCount = numImgs - 2;
@@ -62,11 +58,9 @@ $(document).ready(function () {
             //$("ul carousel-dots").prepend('<li class="carousel-buttons" id="carousel' + addId + '"></li>');
             var addId = addId - 1;
         }
-    } else {
-
     }
 
-    
+    $(".carousel-buttons-container").find("li").first().addClass("active");
 
     $(".carousel-buttons").click(function () {
 
@@ -98,9 +92,10 @@ $(document).ready(function () {
         // Get the current image handle
         var currentImg = "#" + imgContainerHandle.getElementsByTagName("img")[findTheNumb - 1].getAttribute("id");
 
+        // Remove any images that are showing
         $('.individualImage:not(' + currentImg + ')').removeClass("showing").addClass("hiding");
         
-        //console.log(currentImg);
+        // Make the image corresponding to the nav dot visible.
         $(currentImg).removeClass("hiding").addClass("showing");
 
 
@@ -137,15 +132,60 @@ $(document).ready(function () {
         }*/
 
          //.style.display = "inline-block";
-    
     });
-
-
-    $(".carousel-buttons-container").find("li").first().addClass("active");
 
     //firstImg = document.getElementsByClassName("carousel-image-holder");
     //firstImg[1].style.display = "inline-block";
     
+    $(".next").click(function () {
+        // Find the current dot that is active
+        var currNavDotId = $("#carousel-dots").find(".active").attr("id");
+        //console.log(currNavDotId);
+
+        var splitString = currNavDotId.split("carousel")
+        var currentImageNumber = splitString[1];
+
+        // Get the handle for the container having all the images
+        var imgContainerHandle = document.getElementsByClassName("carousel-image-holder").item(0);
+
+        // Check if it is the last dot
+        if(currentImageNumber == numImgs) {
+            // Get the handle for the first image
+            var nextImg = "#" + imgContainerHandle.getElementsByTagName("img")[0].getAttribute("id");
+            //console.log(nextImg);
+
+            // Remove any images that are showing
+            $('.individualImage:not(' + nextImg + ')').removeClass("showing").addClass("hiding");
+            $("#"+currNavDotId).removeClass("active");
+
+            // Make the next image visible.
+            $(nextImg).removeClass("hiding").addClass("showing");
+            $("#carousel1").addClass("active");
+
+        } else {
+            // Get the handle for the next image
+            var nextImg = "#" + imgContainerHandle.getElementsByTagName("img")[currentImageNumber - 1 + 1].getAttribute("id");
+            //console.log(nextImg);
+
+            // Remove any images that are showing
+            $('.individualImage:not(' + nextImg + ')').removeClass("showing").addClass("hiding");
+
+            console.log("#"+currNavDotId);
+            $("#"+currNavDotId).removeClass("active");
+            
+
+            // Make the next image visible.
+            $(nextImg).removeClass("hiding").addClass("showing");
+            console.log("#carousel"+ String( Number(currentImageNumber) + 1 ) );
+            $("#carousel" + String( Number(currentImageNumber) + 1 ) ).addClass("active");
+        }
+        // If yes then go back to the first image
+        // Change active dot
+
+        // If no then go to next image
+        // Change active dot
+
+    })
 
     $(".right-arrow").click(function () {
 
