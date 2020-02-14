@@ -67,8 +67,27 @@ $(document).ready(function () {
 
     });
     
+    $(".prev").click(function () {
+
+        // Find the current dot that is active
+        var currNavDotId = $("#carousel-dots").find(".active").attr("id");
+
+        var splitString = currNavDotId.split("carousel")
+        var currentImageNumber = splitString[1];
+
+        // Get the handle for image container
+        var imgContainerHandle = document.getElementsByClassName("carousel-image-holder").item(0);
+
+        // Check if it is the first dot
+        if(currentImageNumber == 1) {
+            // Get the handle for the first image
+            var nextImg = "#" + imgContainerHandle.getElementsByTagName("img")[0].getAttribute("id");
+
+        }
+    });
+
     $(".next").click(function () {
-        
+
         // Find the current dot that is active
         var currNavDotId = $("#carousel-dots").find(".active").attr("id");
 
@@ -81,14 +100,14 @@ $(document).ready(function () {
         // Check if it is the last dot
         if(currentImageNumber == numImgs) {
             // Get the handle for the first image
-            var nextImg = "#" + imgContainerHandle.getElementsByTagName("img")[0].getAttribute("id");
+            var firstImg = "#" + imgContainerHandle.getElementsByTagName("img")[0].getAttribute("id");
 
             // Remove any images and its nav dots that are showing
-            $('.individualImage:not(' + nextImg + ')').removeClass("showing").addClass("hiding");
+            $('.individualImage:not(' + firstImg + ')').removeClass("showing").addClass("hiding");
             $("#"+currNavDotId).removeClass("active");
 
             // Make the first image visible.
-            $(nextImg).removeClass("hiding").addClass("showing");
+            $(firstImg).removeClass("hiding").addClass("showing");
             $("#carousel1").addClass("active");
 
         } else {
@@ -103,7 +122,7 @@ $(document).ready(function () {
             $(nextImg).removeClass("hiding").addClass("showing");
             $("#carousel" + String( Number(currentImageNumber) + 1 ) ).addClass("active");
         }
-    })
+    });
 
     $(".right-arrow").click(function () {
 
