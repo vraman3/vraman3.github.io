@@ -1,23 +1,5 @@
 $(document).ready(function () {
 
-    /*$(".tab-welcome").click(function() {
-    
-        $("#welcome").toggle();
-    
-    }); 
-    
-    $(".tab-about").click(function() {
-    
-        $("#about").toggle();
-    
-    });
-
-    $(".tab-portfolio").click(function() {
-    
-        $("#portfolio").toggle();
-    
-    });*/
-
     $('.tab-item').click(function () {
 
         var currentAttributeValue = $(this).attr('href');
@@ -55,7 +37,6 @@ $(document).ready(function () {
             li.setAttribute("id", "carousel" + (i+1) );
 
             ul.appendChild(li);
-            //$("ul carousel-dots").prepend('<li class="carousel-buttons" id="carousel' + addId + '"></li>');
             var addId = addId - 1;
         }
     }
@@ -64,30 +45,16 @@ $(document).ready(function () {
 
     $(".carousel-buttons").click(function () {
 
-        // window.addEventListener('load', function () {
-        //     var eles = document.getElementsByClassName("carousel-image-holder");
-        //     console.log(eles);
-        //     console.log(eles.length);
-        //     console.log(eles[0]);
-        // })
-
+        // Find the id of the navigation dot that was clicked and get it's number
         var findIdClicked = $(this).attr("id");
-
-        //console.log(findIdClicked);
-
         var splitString = findIdClicked.split("carousel")
         var findTheNumb = splitString[1];
 
         $(".carousel-buttons").removeClass("active");
         $(this).addClass("active");
-        clicked = parseInt(findTheNumb);
-        var adjustNumberforSlide = findTheNumb - 1;
 
-        // Get the handle for the container having all the images
+        // Get the handle for image container
         var imgContainerHandle = document.getElementsByClassName("carousel-image-holder").item(0);
-
-        //console.log(imgContainerHandle);
-        //console.log(imgContainerHandle.getElementsByTagName("img")[findTheNumb - 1]);
         
         // Get the current image handle
         var currentImg = "#" + imgContainerHandle.getElementsByTagName("img")[findTheNumb - 1].getAttribute("id");
@@ -98,93 +65,44 @@ $(document).ready(function () {
         // Make the image corresponding to the nav dot visible.
         $(currentImg).removeClass("hiding").addClass("showing");
 
-
-        //#(".individualImage:not")
-        //$(".carousel-image-holder").animate({ "left": -(600 * adjustNumberforSlide) + "px" });
-        //console.log(clicked);
-
-        // $('.content-div:not(' + currentAttributeValue + ')').removeClass('showing').addClass('hiding');
-
-        /*if (findTheNumb == 1) {
-            $(".left-arrow").hide();
-            $(".right-arrow").show();
-
-            // $(".individualImage").show();
-            var firstImg = document.getElementsByClassName("carousel-image-holder");
-            var actualFirstImg = firstImg.item(0).getElementsByTagName("img")[0];
-
-            actualFirstImg.style.display = "inline-block";
-            console.log(firstImg.item(0).getElementsByTagName("img")[0]); //.firstChild.setAttribute("display", "inline-block"));
-
-            //firstImg[1].show();
-        } else if (findTheNumb == numImgs) {
-            $(".right-arrow").hide();
-            $(".left-arrow").show();
-
-            // $(".individualImage").show();
-            // firstImg = document.getElementsByClassName("individualImage");
-            // firstImg[1].show();
-        } else {
-            $(".right-arrow").show();
-            $(".left-arrow").show();
-
-            // $(".individualImage").show();
-        }*/
-
-         //.style.display = "inline-block";
     });
-
-    //firstImg = document.getElementsByClassName("carousel-image-holder");
-    //firstImg[1].style.display = "inline-block";
     
     $(".next").click(function () {
+        
         // Find the current dot that is active
         var currNavDotId = $("#carousel-dots").find(".active").attr("id");
-        //console.log(currNavDotId);
 
         var splitString = currNavDotId.split("carousel")
         var currentImageNumber = splitString[1];
 
-        // Get the handle for the container having all the images
+        // Get the handle for image container
         var imgContainerHandle = document.getElementsByClassName("carousel-image-holder").item(0);
 
         // Check if it is the last dot
         if(currentImageNumber == numImgs) {
             // Get the handle for the first image
             var nextImg = "#" + imgContainerHandle.getElementsByTagName("img")[0].getAttribute("id");
-            //console.log(nextImg);
 
-            // Remove any images that are showing
+            // Remove any images and its nav dots that are showing
             $('.individualImage:not(' + nextImg + ')').removeClass("showing").addClass("hiding");
             $("#"+currNavDotId).removeClass("active");
 
-            // Make the next image visible.
+            // Make the first image visible.
             $(nextImg).removeClass("hiding").addClass("showing");
             $("#carousel1").addClass("active");
 
         } else {
             // Get the handle for the next image
             var nextImg = "#" + imgContainerHandle.getElementsByTagName("img")[currentImageNumber - 1 + 1].getAttribute("id");
-            //console.log(nextImg);
 
-            // Remove any images that are showing
+            // Remove earlier image and change the nav dot to not active
             $('.individualImage:not(' + nextImg + ')').removeClass("showing").addClass("hiding");
-
-            console.log("#"+currNavDotId);
             $("#"+currNavDotId).removeClass("active");
             
-
-            // Make the next image visible.
+            // Make the next image and it's nav dot active.
             $(nextImg).removeClass("hiding").addClass("showing");
-            console.log("#carousel"+ String( Number(currentImageNumber) + 1 ) );
             $("#carousel" + String( Number(currentImageNumber) + 1 ) ).addClass("active");
         }
-        // If yes then go back to the first image
-        // Change active dot
-
-        // If no then go to next image
-        // Change active dot
-
     })
 
     $(".right-arrow").click(function () {
