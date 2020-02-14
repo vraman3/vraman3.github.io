@@ -80,9 +80,28 @@ $(document).ready(function () {
 
         // Check if it is the first dot
         if(currentImageNumber == 1) {
-            // Get the handle for the first image
-            var nextImg = "#" + imgContainerHandle.getElementsByTagName("img")[0].getAttribute("id");
+            // Get the handle for the last image
+            var lastImg = "#" + imgContainerHandle.getElementsByTagName("img")[ parseInt(numImgs - 1) ].getAttribute("id");
 
+            // Remove any images that are not lastImg & their nav dot
+            $('.individualImage:not(' + lastImg + ')').removeClass("showing").addClass("hiding");
+            $("#"+currNavDotId).removeClass("active");
+
+            // Make the last image visible.
+            $(lastImg).removeClass("hiding").addClass("showing");
+            $("#carousel" + String(parseInt(numImgs)) ).addClass("active");
+        } else {
+            
+            // Get the handle for the previous image
+            var prevImg = "#" + imgContainerHandle.getElementsByTagName("img")[currentImageNumber - 1 - 1].getAttribute("id");
+            
+            // Remove any images that are not prevImg & their nav dot
+            $('.individualImage:not(' + prevImg + ')').removeClass("showing").addClass("hiding");
+            $("#"+currNavDotId).removeClass("active");
+
+            // Make the previous image and it's nav dot active.
+            $(prevImg).removeClass("hiding").addClass("showing");
+            $("#carousel" + String( Number(currentImageNumber) - 1 ) ).addClass("active");
         }
     });
 
@@ -102,7 +121,7 @@ $(document).ready(function () {
             // Get the handle for the first image
             var firstImg = "#" + imgContainerHandle.getElementsByTagName("img")[0].getAttribute("id");
 
-            // Remove any images and its nav dots that are showing
+            // Remove any images that are not firstImg & their nav dot
             $('.individualImage:not(' + firstImg + ')').removeClass("showing").addClass("hiding");
             $("#"+currNavDotId).removeClass("active");
 
