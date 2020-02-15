@@ -7,7 +7,7 @@ $(document).ready(function () {
         var currentItem = $(currentAttributeValue);
 
         if (currentItem.hasClass('showing')) {
-            currentItem.removeClass('showing').addClass('hiding');
+            // currentItem.removeClass('showing').addClass('hiding');
         }
         else {
             currentItem.removeClass('hiding').addClass('showing');
