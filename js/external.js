@@ -81,6 +81,39 @@ $(document).ready(function () {
 
     });
     
+    removeExistingImagesAndNavigationDots = function (selectedImage, selectedImageNavDotId) {
+
+        // Remove any images that are not prevImg & their nav dot
+        $('.individualImage:not(' + selectedImage + ')').removeClass("showing").addClass("hiding");
+        $("#" + selectedImageNavDotId).removeClass("active");
+
+    }
+    
+    
+    refreshImagesAndNavigationDots = function (selectedImage, selectedImageNavDotId, currentImageNumber, buttonString) {
+
+        
+        // Make the selected image and it's nav dot active.
+        $(selectedImage).removeClass("hiding").addClass("showing");
+
+        if(buttonString === "prev") {
+
+            var newNavDotId = Number(currentImageNumber) - 1;
+            if(newNavDotId == 0) {
+                newCarouselString = "#carousel" + String(parseInt(numImgs));
+            } else {
+                newCarouselString = "#carousel" + String(newNavDotId);
+            }
+            
+            $(newCarouselString ).addClass("active");
+
+        } else if(buttonString === "next") {
+            console.log("pus");
+        }
+
+        //$("#carousel" + String( Number(currentImageNumber) - 1 ) ).addClass("active");
+    }
+
     $(".prev").click(function () {
 
         // Find the current dot that is active
@@ -94,28 +127,26 @@ $(document).ready(function () {
 
         // Check if it is the first dot
         if(currentImageNumber == 1) {
+
             // Get the handle for the last image
             var lastImg = "#" + imgContainerHandle.getElementsByTagName("img")[ parseInt(numImgs - 1) ].getAttribute("id");
 
-            // Remove any images that are not lastImg & their nav dot
-            $('.individualImage:not(' + lastImg + ')').removeClass("showing").addClass("hiding");
-            $("#"+currNavDotId).removeClass("active");
+            removeExistingImagesAndNavigationDots(lastImg, currNavDotId);
 
             // Make the last image visible.
-            $(lastImg).removeClass("hiding").addClass("showing");
-            $("#carousel" + String(parseInt(numImgs)) ).addClass("active");
+            refreshImagesAndNavigationDots(lastImg, currNavDotId, currentImageNumber, "prev");
+
+            //$("#carousel" + String(parseInt(numImgs)) ).addClass("active");
         } else {
             
             // Get the handle for the previous image
             var prevImg = "#" + imgContainerHandle.getElementsByTagName("img")[currentImageNumber - 1 - 1].getAttribute("id");
             
-            // Remove any images that are not prevImg & their nav dot
-            $('.individualImage:not(' + prevImg + ')').removeClass("showing").addClass("hiding");
-            $("#"+currNavDotId).removeClass("active");
+            removeExistingImagesAndNavigationDots(lastImg, currNavDotId);
 
-            // Make the previous image and it's nav dot active.
-            $(prevImg).removeClass("hiding").addClass("showing");
-            $("#carousel" + String( Number(currentImageNumber) - 1 ) ).addClass("active");
+            refreshImagesAndNavigationDots(prevImg, currNavDotId, currentImageNumber, "prev");
+            
+            //$("#carousel" + String( Number(currentImageNumber) - 1 ) ).addClass("active");
         }
     });
 
@@ -135,24 +166,20 @@ $(document).ready(function () {
             // Get the handle for the first image
             var firstImg = "#" + imgContainerHandle.getElementsByTagName("img")[0].getAttribute("id");
 
-            // Remove any images that are not firstImg & their nav dot
-            $('.individualImage:not(' + firstImg + ')').removeClass("showing").addClass("hiding");
-            $("#"+currNavDotId).removeClass("active");
+            removeExistingImagesAndNavigationDots(firstImg, currNavDotId);
 
-            // Make the first image visible.
-            $(firstImg).removeClass("hiding").addClass("showing");
+            refreshImagesAndNavigationDots(firstImg, currNavDotId, currentImageNumber, "next");
+            
             $("#carousel1").addClass("active");
 
         } else {
             // Get the handle for the next image
             var nextImg = "#" + imgContainerHandle.getElementsByTagName("img")[currentImageNumber - 1 + 1].getAttribute("id");
 
-            // Remove earlier image and change the nav dot to not active
-            $('.individualImage:not(' + nextImg + ')').removeClass("showing").addClass("hiding");
-            $("#"+currNavDotId).removeClass("active");
+            removeExistingImagesAndNavigationDots(nextImg, currNavDotId);
             
-            // Make the next image and it's nav dot active.
-            $(nextImg).removeClass("hiding").addClass("showing");
+            refreshImagesAndNavigationDots(nextImg, currNavDotId, currentImageNumber, "next");
+            
             $("#carousel" + String( Number(currentImageNumber) + 1 ) ).addClass("active");
         }
     });
