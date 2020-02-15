@@ -89,7 +89,6 @@ $(document).ready(function () {
 
     }
     
-    
     refreshImagesAndNavigationDots = function (selectedImage, selectedImageNavDotId, currentImageNumber, buttonString) {
 
         
@@ -99,19 +98,29 @@ $(document).ready(function () {
         if(buttonString === "prev") {
 
             var newNavDotId = Number(currentImageNumber) - 1;
+            
             if(newNavDotId == 0) {
                 newCarouselString = "#carousel" + String(parseInt(numImgs));
             } else {
                 newCarouselString = "#carousel" + String(newNavDotId);
             }
             
-            $(newCarouselString ).addClass("active");
-
         } else if(buttonString === "next") {
-            console.log("pus");
+
+            var newNavDotId = Number(currentImageNumber) + 1;
+
+            if(newNavDotId > numImgs) {
+                //
+                // Could also do the following for consistency, but unnecessary
+                // newCarouselString = "#carousel" + String(parseInt(1));
+                ///
+                newCarouselString = "#carousel1";
+            } else {
+                newCarouselString = "#carousel" + String(newNavDotId);
+            }
         }
 
-        //$("#carousel" + String( Number(currentImageNumber) - 1 ) ).addClass("active");
+        $(newCarouselString).addClass("active");
     }
 
     $(".prev").click(function () {
@@ -133,20 +142,14 @@ $(document).ready(function () {
 
             removeExistingImagesAndNavigationDots(lastImg, currNavDotId);
 
-            // Make the last image visible.
             refreshImagesAndNavigationDots(lastImg, currNavDotId, currentImageNumber, "prev");
-
-            //$("#carousel" + String(parseInt(numImgs)) ).addClass("active");
         } else {
             
             // Get the handle for the previous image
             var prevImg = "#" + imgContainerHandle.getElementsByTagName("img")[currentImageNumber - 1 - 1].getAttribute("id");
             
             removeExistingImagesAndNavigationDots(lastImg, currNavDotId);
-
             refreshImagesAndNavigationDots(prevImg, currNavDotId, currentImageNumber, "prev");
-            
-            //$("#carousel" + String( Number(currentImageNumber) - 1 ) ).addClass("active");
         }
     });
 
@@ -170,7 +173,7 @@ $(document).ready(function () {
 
             refreshImagesAndNavigationDots(firstImg, currNavDotId, currentImageNumber, "next");
             
-            $("#carousel1").addClass("active");
+            //$("#carousel1").addClass("active");
 
         } else {
             // Get the handle for the next image
@@ -180,7 +183,7 @@ $(document).ready(function () {
             
             refreshImagesAndNavigationDots(nextImg, currNavDotId, currentImageNumber, "next");
             
-            $("#carousel" + String( Number(currentImageNumber) + 1 ) ).addClass("active");
+            //$("#carousel" + String( Number(currentImageNumber) + 1 ) ).addClass("active");
         }
     });
 
