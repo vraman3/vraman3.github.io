@@ -16,18 +16,32 @@ $(document).ready(function () {
         $('.content-div:not(' + currentAttributeValue + ')').removeClass('showing').addClass('hiding');
     })
 
+    /*$("#slideshow > div:gt(0)").hide();
+
+    setInterval(function() {
+    $('#slideshow > div:first')
+        .fadeOut(1)
+        .next()
+        .fadeIn(1)
+        .end()
+        .appendTo('#slideshow');
+    }, 3000); */
+
+    /*setInterval(function() {
+        $('.carousel-image-holder > img:first')
+        .fadeOut(1000).promise().done(function () {
+            $('.carousel-image-holder > img:first').next()
+            .fadeIn(1000)
+            .end()
+            .appendTo('.carousel-image-holder');
+        })
+    }, 3000);*/
+
+
     var numImgs = $('div.carousel-image-holder img').length;
 
     var addId = numImgs;
-    if (numImgs == 2) {
-        var clicked = 0;
-        imgCount = numImgs - 2;
-    } else if (numImgs <= 1) {
-        $(".right-arrow").hide();
-    } else {
-        var clicked = 1;
-        imgCount = numImgs - 1;
-    }
+    
     if (numImgs > 2) {
         var ul = document.getElementById("carousel-dots");
 
@@ -143,50 +157,6 @@ $(document).ready(function () {
         }
     });
 
-    $(".right-arrow").click(function () {
-
-        if (clicked < imgCount) {
-
-            $(".carousel-image-holder").animate({ "left": "-=600px" });
-
-
-            console.log(clicked);
-        } else {
-            $(".carousel-image-holder").animate({ "left": "-=600px" });
-            $(".right-arrow").hide();
-
-            console.log(clicked);
-        }
-
-        clicked = clicked + 1;
-        $(".left-arrow").show();
-        $(".carousel-buttons").removeClass("active");
-        $("#carousel" + clicked).addClass("active");
-
-    });
-
-    $(".left-arrow").click(function () {
-
-        if (clicked > 2) {
-
-            $(".carousel-image-holder").animate({ "left": "+=600px" });
-
-            console.log(clicked);
-        } else {
-            $(".carousel-image-holder").animate({ "left": "+=600px" });
-            $(".left-arrow").hide();
-
-            console.log(clicked);
-        }
-
-        $(".right-arrow").show();
-        clicked = clicked - 1;
-        $(".carousel-buttons").removeClass("active");
-        $("#carousel" + clicked).addClass("active");
-
-
-    });
-
     /*var slideIndex = 1;
     showSlides(slideIndex);
 
@@ -229,15 +199,6 @@ $(document).ready(function () {
 
     }*/
 
-    /*$("#slideshow > div:gt(0)").hide();
-
-    setInterval(function() {
-    $('#slideshow > div:first')
-        .fadeOut(1)
-        .next()
-        .fadeIn(1)
-        .end()
-        .appendTo('#slideshow');
-    }, 3000); */
+    
 });
 
