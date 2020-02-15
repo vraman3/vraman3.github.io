@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+    /*
+    *
+    */
     $('.tab-item').click(function () {
 
         var currentAttributeValue = $(this).attr('href');
@@ -40,8 +43,9 @@ $(document).ready(function () {
 
     var numImgs = $('div.carousel-image-holder img').length;
 
+    // Add carousel-buttons in real-time based on the number of 'img's present
+    // in the carousel-image-holder div and set the first nav dot to active
     var addId = numImgs;
-    
     if (numImgs > 2) {
         var ul = document.getElementById("carousel-dots");
 
@@ -54,9 +58,11 @@ $(document).ready(function () {
             var addId = addId - 1;
         }
     }
-
     $(".carousel-buttons-container").find("li").first().addClass("active");
 
+    /*
+    *
+    */
     $(".carousel-buttons").click(function () {
 
         // Find the id of the navigation dot that was clicked and get it's number
@@ -81,17 +87,21 @@ $(document).ready(function () {
 
     });
     
+    /*
+    *
+    */
     removeExistingImagesAndNavigationDots = function (selectedImage, selectedImageNavDotId) {
 
         // Remove any images that are not prevImg & their nav dot
         $('.individualImage:not(' + selectedImage + ')').removeClass("showing").addClass("hiding");
         $("#" + selectedImageNavDotId).removeClass("active");
-
     }
     
+    /*
+    *
+    */
     refreshImagesAndNavigationDots = function (selectedImage, selectedImageNavDotId, currentImageNumber, buttonString) {
 
-        
         // Make the selected image and it's nav dot active.
         $(selectedImage).removeClass("hiding").addClass("showing");
 
@@ -123,6 +133,9 @@ $(document).ready(function () {
         $(newCarouselString).addClass("active");
     }
 
+    /*
+    *
+    */
     $(".prev").click(function () {
 
         // Find the current dot that is active
@@ -141,18 +154,20 @@ $(document).ready(function () {
             var lastImg = "#" + imgContainerHandle.getElementsByTagName("img")[ parseInt(numImgs - 1) ].getAttribute("id");
 
             removeExistingImagesAndNavigationDots(lastImg, currNavDotId);
-
             refreshImagesAndNavigationDots(lastImg, currNavDotId, currentImageNumber, "prev");
         } else {
             
             // Get the handle for the previous image
             var prevImg = "#" + imgContainerHandle.getElementsByTagName("img")[currentImageNumber - 1 - 1].getAttribute("id");
             
-            removeExistingImagesAndNavigationDots(lastImg, currNavDotId);
+            removeExistingImagesAndNavigationDots(prevImg, currNavDotId);
             refreshImagesAndNavigationDots(prevImg, currNavDotId, currentImageNumber, "prev");
         }
     });
 
+    /*
+    *
+    */
     $(".next").click(function () {
 
         // Find the current dot that is active
@@ -170,20 +185,14 @@ $(document).ready(function () {
             var firstImg = "#" + imgContainerHandle.getElementsByTagName("img")[0].getAttribute("id");
 
             removeExistingImagesAndNavigationDots(firstImg, currNavDotId);
-
             refreshImagesAndNavigationDots(firstImg, currNavDotId, currentImageNumber, "next");
-            
-            //$("#carousel1").addClass("active");
 
         } else {
             // Get the handle for the next image
             var nextImg = "#" + imgContainerHandle.getElementsByTagName("img")[currentImageNumber - 1 + 1].getAttribute("id");
 
             removeExistingImagesAndNavigationDots(nextImg, currNavDotId);
-            
             refreshImagesAndNavigationDots(nextImg, currNavDotId, currentImageNumber, "next");
-            
-            //$("#carousel" + String( Number(currentImageNumber) + 1 ) ).addClass("active");
         }
     });
 
