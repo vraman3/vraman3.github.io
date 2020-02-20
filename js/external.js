@@ -40,6 +40,10 @@ $(document).ready(function () {
         })
     }, 3000);*/
 
+    setInterval(function () {
+        $(".next").trigger("click");
+    }, 5000)
+
 
     var numImgs = $('div.carousel-image-holder img').length;
 
