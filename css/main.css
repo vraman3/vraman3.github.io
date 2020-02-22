@@ -188,7 +188,7 @@ a:after {
 .carousel-image-holder{
   /*height:360px;
   width: 2400px;*/
-  height: 480px;
+  height: 510px;
   width: 640px;
   position: relative;
   left: 30%;
@@ -207,7 +207,7 @@ a:after {
   /*float: left;*/
   margin: auto auto;
   vertical-align: middle;
-  padding: 0;
+  padding: 0px;
   display: none;
 }
 
@@ -257,11 +257,17 @@ a:after {
   margin: 0;
 }
 
+.image-caption {
+  display: block;
+  text-align: center;
+  
+}
+
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 416px;
+  top: 446px;
   width: auto;
   padding: 16px;
   color: white;

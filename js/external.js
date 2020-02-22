@@ -1,3 +1,29 @@
+function SlideshowTimer(func, interval) {
+    timerObj = setInterval(func, interval);
+
+    this.stop = function () {
+        if(timerObj) {
+            clearInterval(timerObj);
+            timerObj = null;
+        }
+        return this;
+    }
+
+    this.start = function() {
+        if(!timerObj) {
+            this.stop();
+            timerObj = setInterval(func, interval);
+        }
+        return this;
+    }
+
+    // default value of newInterval is interval
+    this.reset = function(newInterval = interval) {
+        interval = newInterval;
+        return this.stop().start();
+    }
+}
+
 $(document).ready(function () {
 
     /*
@@ -40,10 +66,13 @@ $(document).ready(function () {
         })
     }, 3000);*/
 
-    setInterval(function () {
+    /*setInterval(function () {
         $(".next").trigger("click");
-    }, 5000)
+    }, 5000)*/
 
+    var slideTimer = new SlideshowTimer(function() {
+        $(".next").trigger("click");
+    }, 3000);
 
     var numImgs = $('div.carousel-image-holder img').length;
 
@@ -167,6 +196,8 @@ $(document).ready(function () {
             removeExistingImagesAndNavigationDots(prevImg, currNavDotId);
             refreshImagesAndNavigationDots(prevImg, currNavDotId, currentImageNumber, "prev");
         }
+
+        slideTimer.reset();
     });
 
     /*
@@ -198,6 +229,8 @@ $(document).ready(function () {
             removeExistingImagesAndNavigationDots(nextImg, currNavDotId);
             refreshImagesAndNavigationDots(nextImg, currNavDotId, currentImageNumber, "next");
         }
+
+        slideTimer.reset();
     });
 
     /*var slideIndex = 1;
