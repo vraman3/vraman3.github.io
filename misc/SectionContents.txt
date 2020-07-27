@@ -1,0 +1,113 @@
+Section Contents
+v1.0
+
+Section 1 - Header
+Vishwanath Raman
+
+About Me
+Projects
+Experience
+Skills & Abilities
+Languages
+Contact - Footer
+
+Section 2
+About Me
+
+I'm a software engineer primarily interested in programming. C++ is my most comfortable language,
+but I have experience working with other languages such as Python, C#, Matlab, Javascript, and Kotlin
+My fields of interest include computer graphics, computational biology, biomedical visualization, biomedical engineering, 
+machine learning, and video games.
+
+"Theme inspired by PvG?"
+
+Section 3
+Projects
+
+Section 4
+Experience
+
+Career
+Software Engineer
+Sterling Medical Devices
+April 2018 - September 2018
+- Developed front end and back end using C# WPF in an application to be used for clinical trial, using the MVVM architecture.
+- Performed static analysis and unit testing using SciTools Understand and Tessy 4.0 on a native C code base.
+- Prepared documents required for 510(k) submissions to the FDA using company guidelines.
+- Followed agile development using Polarion.
+
+Software Engineer
+Baxter International Inc.
+September 2016 - August 2016
+- Developed software for the SIGMA Spectrum Infusion Pump.
+- Debugged and develop WiFi protocols (TCP/UDP) for Pump interaction.
+- Created GUI for pump interface using C# WPF and LINQ.
+- Automated software test procedures using C# for Master Drug Library Editor (MDL).
+- Followed agile development using JIRA.
+
+Research Assistant
+Dr. Joe Geigel - Rochester Institute of Technology
+September 2014 - September 2015
+- Contributor to the publication that stemmed from this research project: "Dynamic Functional Assessment of Hand Motion Using an Animation Glove: The Effect of Stenosing Tenosynovitis." Oct 2017.
+- Helped run the CyberGlove II for capturing joint velocities and range of motion of hands, to treat carpal tunnel syndrome and trigger finger, using Qt.
+- Wrote scripts as required to run and record the CyberGlove MoCap software.
+- Interacted with the doctors from University of Rochester and CyberGlove to decide requirements and feasibility. (Qt, C++, Python)
+
+Research Assistant
+Dr. Joe Geigel - Rochester Institute of Technology
+January 2015 - May 2015
+- Attempt to integrate Faceshift Studio (now discontinued) and The Eye Tribe to create real time mapping of facial features and eye gaze using virtual world clients.
+- Setting up OpenSimulator and Firestorm.
+- Worked with a modeler (Dr. Marla Schweppe) to identify and get the correct blendshapes for importing into Unity 3D.
+- A part of this project was used at the Rochester Street Light Festival. An actor sat in front of a sensor, whose facial features controlled a custom model projected on the face of a building. (Video or pictures available upon request)
+
+Research Assistant
+Dr. Linwei Wang - Rochester Institute of Technology
+June 2014 - January 2015
+- Application and analysis of existing machine learning techniques to predict the ablation site for treatment of ventricular tachycardia.
+- Application of algorithms like lasso, ridge regression, multi-task learning.
+- Pre-processing and analysis of ECG waveforms (detrending, denoising, constant offset, etc)
+- Master's thesis topic.
+(MATLAB, Python)
+
+Education
+Rochester Institute of Technology
+Master of Science, Computer Science
+
+University of Mumbai,
+Bachelor of Engineering, Computer Engineering
+
+Section 5
+Skills
+
+C++ 4.5
+Python 4.5
+Matlab 4.5
+C# 3.5
+HTML 3
+CSS 3
+Javascript 3
+Kotlin 2
+Hidden Qt 2
+
+Tools & Frameworks
+Blender 3
+Autodesk Maya 3
+Scikit-learn 3
+OpenGL 3
+
+Section 6
+Languages
+
+Tamil (Spoken)
+Hindi
+Marathi
+French
+English
+
+Section 7 - Footer
+Contact
+Linkedin
+Github
+Gmail
+
