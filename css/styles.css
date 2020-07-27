@@ -10,3 +10,11 @@ html,
 body {
     
 }
+
+header {
+    background-image: url(img/header-bg.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
