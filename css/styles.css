@@ -16,8 +16,8 @@ body {
 
 /* REUSABLE COMPONENTS */
 .row {
-    max-width: 1140px;
-    margin: 0 auto 0 auto;
+/*    max-width: 1140px;*/
+/*    margin: 0 auto 0 auto;*/
 }
 
 /* HEADINGS */
@@ -54,38 +54,33 @@ header {
     background-attachment: fixed;
 }
 
-.header-title-container {
-    height: 80%;
-    text-align: center;
+.header-container {
+    height: 100%;
     
-    border: 5px solid;  
-    border-color: darkgoldenrod;
+    display: flex;
+    flex-direction: column;
 }
+
 .header-title {
     position: absolute;
-    top: 50%;
+    top: 43%;
     left: 50%;
     transform: translate(-50%,-50%)
-/*    text-align: center;*/
 }
 
 /* MAIN NAV */
 
+.header-nav {
+    margin-top: auto;
+}
+
 .main-nav {
-    list-style: none;
     text-align: center;
-    
-    border: 1px solid;  
-    border-color: black;
 }
 
 .main-nav li {
     display: inline-block;
     margin-left: 40px;
-/*
-    border: 1px solid;  
-    border-color: brown;
-*/
 }
 
 .main-nav li a:link,
@@ -95,9 +90,10 @@ header {
     z-index: 1;
     padding: 20px;
     margin: -0px;
-    color: #fff;
+    color:darkslateblue;
     text-decoration: none;
     font-size: 150%;
 }
+
 /* Section 2 - About Me */
 
