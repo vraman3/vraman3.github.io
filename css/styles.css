@@ -8,8 +8,37 @@
 
 html,
 body {
-    
+    background-color: #f2f2f2;
+    font-family: 'Raleway', 'Lato', sans-serif; /* OPTIONAL: Google Fonts - base font */
+    font-weight: 300;
+    font-size: 16px;
 }
+
+/* HEADINGS */
+
+h1,
+h2,
+h3{
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 300%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+/* LINKS */
+
+a:link,
+a:visited {
+    text-decoration: none;
+/*    padding-bottom: 1px;*/
+/*    border-bottom: 1px solid #cf6e22;*/
+}
+
+/* HEADER */
 
 header {
     background-image: url(img/header-bg.jpg);
@@ -18,3 +47,40 @@ header {
     background-position: center;
     background-attachment: fixed;
 }
+
+.header-title-container {
+    height: 80%;
+    text-align: center;
+/*    vertical-align:middle;*/
+}
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+/*    text-align: center;*/
+}
+
+/* MAIN NAV */
+
+.main-nav {
+    
+    list-style: none;
+    text-align: center;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+    border: 1px solid;
+    border-color: brown;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    color: #fff;
+    text-decoration: none;
+    font-size: 150%;
+}
+/* Section 2 - About Me */
+
