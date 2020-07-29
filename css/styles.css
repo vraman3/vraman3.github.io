@@ -12,12 +12,16 @@ body {
     font-family: 'Raleway', 'Lato', sans-serif; /* OPTIONAL: Google Fonts - base font */
     font-weight: 300;
     font-size: 16px;
+    line-height: 1.75;
 }
 
 /* REUSABLE COMPONENTS */
 .row {
-/*    max-width: 1140px;*/
-/*    margin: 0 auto 0 auto;*/
+    
+}
+
+section {
+    padding: 40px 180px;
 }
 
 /* HEADINGS */
@@ -33,6 +37,12 @@ h1 {
     font-size: 300%;
     word-spacing: 4px;
     letter-spacing: 1px;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 /* LINKS */
@@ -97,3 +107,10 @@ header {
 
 /* Section 2 - About Me */
 
+.section-aboutme h2 {
+    padding-bottom: 40px;
+}
+
+.section-aboutme p {
+    text-align: justify;
+}
