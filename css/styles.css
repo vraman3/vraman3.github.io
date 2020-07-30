@@ -114,3 +114,23 @@ header {
 .section-aboutme p {
     text-align: justify;
 }
+
+/* Section 3 - Projects */
+
+.section-projects {
+    background: #fafafa;
+}
+
+.slideshow-container {
+    text-align: center;
+}
+
+.slideshow-image-holder {
+    
+}
+
+.slideImage {
+    width: 640px;
+    height: 411px;
+    
+}
