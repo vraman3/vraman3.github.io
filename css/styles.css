@@ -149,3 +149,27 @@ header {
 .section-experience h2 {
     padding-bottom: 40px;
 }
+
+/* Section  - Footer */
+
+
+footer {
+    /* For debug only */
+    border: 1px solid;
+}
+
+.footer-nav {
+    text-align: center;
+}
+
+.footer-nav li {
+    display: inline-block;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited {
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 150%;
+}
