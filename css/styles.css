@@ -121,7 +121,12 @@ header {
     background: #fafafa;
 }
 
+.section-projects h2{
+    padding-bottom: 40px;
+}
+
 .slideshow-container {
+    padding-top: 40px;
     text-align: center;
 }
 
@@ -133,4 +138,14 @@ header {
     width: 640px;
     height: 411px;
     
+}
+
+/* Section 4 - Experience */
+
+.section-experience {
+    
+}
+
+.section-experience h2 {
+    padding-bottom: 40px;
 }
