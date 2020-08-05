@@ -15,14 +15,42 @@ body {
     line-height: 1.75;
 }
 
-/* REUSABLE COMPONENTS */
-.row {
-    
+hr {
+    margin: 40px 0;
+    border: 0;
+    border-top: 1px solid black;
+}
+
+div {
+    box-sizing: border-box;
 }
 
 section {
     padding: 40px 180px;
 }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+
+/* REUSABLE COMPONENTS */
+.row {
+    
+}
+
+.no-list-style {
+    list-style: none;
+}
+
+
 
 /* HEADINGS */
 
@@ -149,6 +177,43 @@ header {
 .section-experience h2 {
     padding-bottom: 40px;
 }
+
+/* Section 5 - Skills */
+
+.section-skills {
+    background: #fafafa;
+}
+
+ul > li .skill-name {
+    display: inline-block;
+    width: 60%;
+}
+
+ul > li .skill-score {
+    float: right;
+}
+
+.skill-columns-container {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.skill-column-1{
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.score-icon {
+    color: darkcyan;
+}
+
+
+
+
+
+
+
 
 /* Section  - Footer */
 
