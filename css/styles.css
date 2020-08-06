@@ -21,6 +21,10 @@ hr {
     border-top: 1px solid black;
 }
 
+h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 div {
     box-sizing: border-box;
 }
@@ -193,7 +197,7 @@ ul > li .skill-score {
     float: right;
 }
 
-.skill-columns-container {
+.programming-languages {
     margin-right: -15px;
     margin-left: -15px;
 }
