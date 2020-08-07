@@ -46,7 +46,7 @@ section {
 
 .temporary-h5 {
     text-align: center;
-    color:darkcyan
+    color:darkcyan;
 }
 /* REUSABLE COMPONENTS */
 .row {
@@ -163,16 +163,48 @@ header {
 .slideshow-container {
     padding-top: 40px;
     text-align: center;
+/*
+    width: 600px;
+    height: 360px;
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+*/
 }
 
 .slideshow-image-holder {
-    
+/*
+    width: 640px;
+    height: 511px;
+    position: relative;
+    left: 30%;
+    display: inline-block;
+    z-index: 1;
+*/
 }
 
-.slideImage {
+.slideImage.showing {
     width: 640px;
     height: 411px;
-    
+    transition: opacity .5s ease-out;
+    display: inline-block;
+}
+
+.slideImage.hiding {
+    width: 640px;
+    height: 411px;
+    transition: opacity .5s ease-out;
+    display: none;
+}
+
+.carousel-dots{
+/*
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+*/
 }
 
 /* Section 4 - Experience */

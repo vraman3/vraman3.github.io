@@ -14,6 +14,9 @@
         <link rel='stylesheet' href='css/lato-v14-latin-regular.css' type='text/css'>
         <link rel='stylesheet' href='css/raleway-v12-latin-regular.css' type='text/css'>
         
+        <!-- Javascript -->
+        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/script.js"></script>
         <title>Vishwanath Raman's Home Page</title>
     </head>
     
@@ -64,14 +67,30 @@
             </div>
         </section>
         
-        <section class="section-projects">
+        <section class="section-projects clearfix">
             <div class="row">
                 <h2>Projects</h2>
                 <hr>
             </div>
             <div class="slideshow-container">
                 <div class="slideshow-image-holder">
-                    <img class="slideImage" src="C:\Github Source\vraman3.github.io\images\header-bg-3.jpg">
+                    
+                    <img class="slideImage showing" id="img1" src="C:\Github Source\vraman3.github.io\images\header-bg-3.jpg">
+                    
+                    <img class="slideImage" id="img2" src="http://4.bp.blogspot.com/-euzhczyVauA/VVawUfF_KHI/AAAAAAAAAFo/8M6AGJq3HC8/s1600/Ward_Lmax1000.jpg"/>
+                    
+                    <img class="slideImage" id="img3" src="images/header-bg-4.jpg">
+                    
+                    <div class="image-caption">
+                        <p>Caption here</p>
+                    </div>
+                    
+                    <!-- The dots/circles -->
+                    <div class="slideshow-buttons-container">
+                        <ul class="carousel-dots"></ul>
+                        <a class="prev" id="prevSlide">&#10094;</a>
+                        <a class="next" id="nextSlide">&#10095;</a>
+                    </div>
                 </div>
             </div>
         </section>
