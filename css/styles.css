@@ -44,7 +44,10 @@ section {
 * html .clearfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
-
+.temporary-h5 {
+    text-align: center;
+    color:darkcyan
+}
 /* REUSABLE COMPONENTS */
 .row {
     
@@ -197,12 +200,19 @@ ul > li .skill-score {
     float: right;
 }
 
-.programming-languages {
+.skill-subsection {
     margin-right: -15px;
     margin-left: -15px;
 }
 
 .skill-column-1{
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.skill-column-2{
     position: relative;
     padding-right: 15px;
     padding-left: 15px;
