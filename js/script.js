@@ -46,6 +46,8 @@ $(document).ready(function () {
         }
     }
     
+    
+    
     $(".slideshow-buttons-container").find("li").first().addClass("active");
     
     removeExistingImagesAndNavigationDots = function (selectedImage, selectedCaption, selectedImageNavDotId) {
@@ -106,21 +108,29 @@ $(document).ready(function () {
         // Get the handle for image container
         var imgContainerHandle = document.getElementsByClassName("slideshow-image-holder").item(0);
 
+        // Get the handle for caption container
+        var captionContainerHandle = document.getElementsByClassName("image-caption-container")[0];
+        
         // Check if it is the first dot
         if(currentImageNumber == 1) {
 
             // Get the handle for the last image
             var lastImg = "#" + imgContainerHandle.getElementsByTagName("img")[ parseInt(numImgs - 1) ].getAttribute("id");
 
-            removeExistingImagesAndNavigationDots(lastImg, currNavDotClass);
-            refreshImagesAndNavigationDots(lastImg, currNavDotClass, currentImageNumber, "prev");
+            // Get the handle for the last caption
+            var lastCaption = "#" + captionContainerHandle.getElementsByTagName("p")[parseInt(numImgs - 1) ].getAttribute("id");
+            
+            removeExistingImagesAndNavigationDots(lastImg, lastCaption, currNavDotClass);
+            refreshImagesAndNavigationDots(lastImg, lastCaption, currNavDotClass, currentImageNumber, "prev");
         } else {
             
             // Get the handle for the previous image
             var prevImg = "#" + imgContainerHandle.getElementsByTagName("img")[currentImageNumber - 1 - 1].getAttribute("id");
             
-            removeExistingImagesAndNavigationDots(prevImg, currNavDotClass);
-            refreshImagesAndNavigationDots(prevImg, currNavDotClass, currentImageNumber, "prev");
+            var prevCaption = "#" + captionContainerHandle.getElementsByTagName("p")[currentImageNumber - 1 - 1].getAttribute("id");
+            
+            removeExistingImagesAndNavigationDots(prevImg, prevCaption, currNavDotClass);
+            refreshImagesAndNavigationDots(prevImg, prevCaption, currNavDotClass, currentImageNumber, "prev");
         }
 
         slideTimer.reset();
