@@ -175,6 +175,7 @@ header {
 }
 
 .slideshow-image-holder {
+    text-align: center;
 /*
     width: 640px;
     height: 511px;
@@ -185,6 +186,10 @@ header {
 */
 }
 
+.slideshow-image-holder img {
+    display: none;
+}
+
 .slideImage.showing {
     width: 640px;
     height: 411px;
@@ -193,18 +198,56 @@ header {
 }
 
 .slideImage.hiding {
-    width: 640px;
-    height: 411px;
     transition: opacity .5s ease-out;
     display: none;
 }
 
-.carousel-dots{
-/*
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-*/
+.image-footer {
+    width: 640px;
+    text-align: center;
+    display: inline-block;
+}
+.image-caption {
+}
+
+.slideshow-buttons-container {
+/*    display: inline-block;*/
+/*    text-align: center;*/
+}
+
+.carousel-dots-ul{
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-dots-li {
+    background-color: #ddd;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 20px 20px 0 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.carousel-dots-li:last-of-type{
+    margin: 0;
+}
+
+.prev, .next {
+    cursor: pointer;
+    font-size: 250%;
+}
+
+.prev {
+    float: left;
+}
+
+.next {
+    float: right;
 }
 
 /* Section 4 - Experience */
@@ -216,6 +259,8 @@ header {
 .section-experience h2 {
     padding-bottom: 40px;
 }
+
+
 
 /* Section 5 - Skills */
 
