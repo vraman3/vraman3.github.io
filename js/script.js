@@ -26,9 +26,9 @@ function SlideshowTimer(func, interval) {
 
 $(document).ready(function () {
     
-//    var slideTimer = new SlideshowTimer(function() {
-//        $(".next").trigger("click");
-//    }, 5000);
+    var slideTimer = new SlideshowTimer(function() {
+        $(".next").trigger("click");
+    }, 5000);
     
     var numImgs = $('div.slideshow-image-holder img').length;
     
@@ -57,7 +57,6 @@ $(document).ready(function () {
         var splitString = findIdClicked.split("dot");
         var findTheNumb = splitString[1];
 
-        console.log("here")
         $(".carousel-dots-li").removeClass("active");
         $(this).addClass("active");
         
@@ -123,7 +122,7 @@ $(document).ready(function () {
             refreshImagesAndNavigationDots(prevImg, prevCaption, currNavDotClass, currentImageNumber, numImgs, "prev");
         }
 
-//        slideTimer.reset();
+        slideTimer.reset();
     });
     
     $(".next").click(function () {
@@ -160,7 +159,7 @@ $(document).ready(function () {
             refreshImagesAndNavigationDots(nextImg, nextCaption, currNavDotId, currentImageNumber, numImgs, "next");
         }
 
-//        slideTimer.reset();
+        slideTimer.reset();
     });
 });
 

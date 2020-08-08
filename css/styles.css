@@ -247,6 +247,17 @@ header {
     margin: 0;
 }
 
+.carousel-dots-li.active {
+    background-color: coral;
+}
+
+/*
+.carousel-dots-li:hover {
+    height: 20px;
+    width: 20px;
+}
+*/
+
 .prev, .next {
     cursor: pointer;
     font-size: 250%;
