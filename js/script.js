@@ -30,8 +30,6 @@ $(document).ready(function () {
         $(".next").trigger("click");
     }, 5000);
     
-    slideTimer.stop();
-    
     var numImgs = $('div.slideshow-image-holder img').length;
     
 //    console.log(numImgs);
@@ -42,7 +40,7 @@ $(document).ready(function () {
         for(i=0; i < numImgs; i++ ) {
             var li = document.createElement("li");
             li.setAttribute("class", "carousel-dots-li");
-            li.setAttribute("id", "carousel" + (i+1) );
+            li.setAttribute("id", "dot" + (i+1) );
             
             ul.appendChild(li);
         }
@@ -50,26 +48,33 @@ $(document).ready(function () {
     
     $(".slideshow-buttons-container").find("li").first().addClass("active");
     
-    removeExistingImagesAndNavigationDots = function (selectedImage, selectedImageNavDotId) {
+    removeExistingImagesAndNavigationDots = function (selectedImage, selectedCaption, selectedImageNavDotId) {
 
-        // Remove any images that are not prevImg & their nav dot
+        // Remove any images that are not selectedImg & their nav dot
         $('.slideImage:not(' + selectedImage + ')').removeClass("showing").addClass("hiding");
+        
         $("#" + selectedImageNavDotId).removeClass("active");
+        
+        // Remove the captions that are not for selectedImg
+        $('.image-caption-p:not(' + selectedCaption + ')').removeClass("showing").addClass("hiding");
+
     }
     
-    refreshImagesAndNavigationDots = function (selectedImage, selectedImageNavDotId, currentImageNumber, buttonString) {
+    refreshImagesAndNavigationDots = function (selectedImage, selectedCaption, selectedImageNavDotId, currentImageNumber, buttonString) {
 
         // Make the selected image and it's nav dot active.
         $(selectedImage).removeClass("hiding").addClass("showing");
 
+        $(selectedCaption).removeClass("hiding").addClass("showing");
+        
         if(buttonString === "prev") {
 
             var newNavDotId = Number(currentImageNumber) - 1;
             
             if(newNavDotId == 0) {
-                newCarouselString = "#carousel" + String(parseInt(numImgs));
+                newCarouselString = "#dot" + String(parseInt(numImgs));
             } else {
-                newCarouselString = "#carousel" + String(newNavDotId);
+                newCarouselString = "#dot" + String(newNavDotId);
             }
             
         } else if(buttonString === "next") {
@@ -81,9 +86,9 @@ $(document).ready(function () {
                 // Could also do the following for consistency, but unnecessary
                 // newCarouselString = "#carousel" + String(parseInt(1));
                 ///
-                newCarouselString = "#carousel1";
+                newCarouselString = "#dot1";
             } else {
-                newCarouselString = "#carousel" + String(newNavDotId);
+                newCarouselString = "#dot" + String(newNavDotId);
             }
         }
 
@@ -95,7 +100,7 @@ $(document).ready(function () {
         // Find the current dot that is active
         var currNavDotClass = $(".carousel-dots-ul").find(".active").attr("id");
         
-        var splitString = currNavDotClass.split("carousel");
+        var splitString = currNavDotClass.split("dot");
         var currentImageNumber = splitString[1];
 
         // Get the handle for image container
@@ -126,26 +131,33 @@ $(document).ready(function () {
         // Find the current dot that is active
         var currNavDotId = $(".carousel-dots-ul").find(".active").attr("id");
 
-        var splitString = currNavDotId.split("carousel")
+        var splitString = currNavDotId.split("dot")
         var currentImageNumber = splitString[1];
 
         // Get the handle for image container
         var imgContainerHandle = document.getElementsByClassName("slideshow-image-holder").item(0);
-
+        
+        // Get the handle for caption container
+        var captionContainerHandle = document.getElementsByClassName("image-caption-container")[0];
+        
         // Check if it is the last dot
         if(currentImageNumber == numImgs) {
             // Get the handle for the first image
             var firstImg = "#" + imgContainerHandle.getElementsByTagName("img")[0].getAttribute("id");
-
-            removeExistingImagesAndNavigationDots(firstImg, currNavDotId);
-            refreshImagesAndNavigationDots(firstImg, currNavDotId, currentImageNumber, "next");
+                        
+            var firstCaption = "#" + captionContainerHandle.getElementsByTagName("p")[0].getAttribute("id");
+            
+            removeExistingImagesAndNavigationDots(firstImg, firstCaption, currNavDotId);
+            refreshImagesAndNavigationDots(firstImg, firstCaption, currNavDotId, currentImageNumber, "next");
 
         } else {
             // Get the handle for the next image
             var nextImg = "#" + imgContainerHandle.getElementsByTagName("img")[currentImageNumber - 1 + 1].getAttribute("id");
-
-            removeExistingImagesAndNavigationDots(nextImg, currNavDotId);
-            refreshImagesAndNavigationDots(nextImg, currNavDotId, currentImageNumber, "next");
+            
+            var nextCaption = "#" + captionContainerHandle.getElementsByTagName("p")[currentImageNumber - 1 + 1].getAttribute("id");
+            
+            removeExistingImagesAndNavigationDots(nextImg, nextCaption, currNavDotId);
+            refreshImagesAndNavigationDots(nextImg, nextCaption, currNavDotId, currentImageNumber, "next");
         }
 
         slideTimer.reset();

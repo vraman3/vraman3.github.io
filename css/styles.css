@@ -188,6 +188,7 @@ header {
 
 .slideshow-image-holder img {
     display: none;
+    border-radius: 5%;
 }
 
 .slideImage.showing {
@@ -207,7 +208,16 @@ header {
     text-align: center;
     display: inline-block;
 }
-.image-caption {
+
+.image-caption-container p {
+    display: none;
+}
+.image-caption-p.showing {
+    display: block;
+}
+
+.image-caption-p.hiding {
+    display: none;
 }
 
 .slideshow-buttons-container {
