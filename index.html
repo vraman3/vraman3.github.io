@@ -1,446 +1,514 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!-- OPTIONAL: description -->
-    <meta name="description" content="Personal website">
-    <!-- OPTIONAL: author -->
-    <meta name="author" content="Vishwanath Raman">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="icon.png" />
-    <title>Vishwanath Raman CV</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-
-    <!-- Link the main.css stylesheet -->
-    <link href="css/main.css" rel="stylesheet">
-
-    <link rel='stylesheet' href='css/lato-v14-latin-regular.css' type='text/css'>
-    <link rel='stylesheet' href='css/raleway-v12-latin-regular.css' type='text/css'>
-
-    <!-- OPTIONAL: Google Fonts (don't forget to edit main.css also)
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'> -->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-
-
-    <div class="header" id="headerwrap">
-        <div class="container">
-            <div class="row centered">
-                <div class="col-lg-12">
+    <head>
+        
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/grid.css">
+        <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+        
+        <!-- Bootstrap core CSS -->
+<!--        <link href="css/bootstrap.css" rel="stylesheet">-->
+        
+        <!-- Fonts -->
+        <link rel='stylesheet' href='css/lato-v14-latin-regular.css' type='text/css'>
+        <link rel='stylesheet' href='css/raleway-v12-latin-regular.css' type='text/css'>
+        
+        <!-- Javascript -->
+        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/script.js"></script>
+        <title>Vishwanath Raman's Home Page</title>
+    </head>
+    
+    <body>
+        <header>
+            <div class="header-container">
+                <div class="header-title">
                     <h1>Vishwanath Raman</h1>
+                    <h5 class="temporary-h5">~Website Under Construction~</h5>
                 </div>
+            
+                <nav class="header-nav">
+                    <ul class="main-nav">
+                        <li> <a href="#">About Me</a>   </li>
+                        <li> <a href="#">Projects</a>   </li>
+                        <li> <a href="#">Experience</a> </li>
+                        <li> <a href="#">Skills</a>     </li>
+                        <li> <a href="#">Languages</a>  </li>
+                        <li> <a href="#">Contact</a>    </li>
+                    </ul>
+                </nav>
             </div>
-            <div class="row centered">
-                <div class="col-lg-12">
-                    <!--<a href="https://github.com/vraman3/vraman3.github.io/blob/master/Vishwanath_Raman_Resume.pdf"
-                        target="_blank"><i class="icon-file"></i>
-                        <md>Resume</md>
-                    </a>-->
+        </header>
+        
+        <section class="section-aboutme">
+            <div class="row">
+                <h2>About Me</h2>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <p>
+                        I'm a software engineer primarily interested in programming. C++ is my most comfortable language, but I have experience working with other languages such as Python, C#, Matlab, Javascript, and Kotlin. My fields of interest include computer graphics, video games, computational biology, biomedical visualization, biomedical engineering, and machine learning.
+                    </p>
+                </div>
+                <div class="col span-1-of-3">
+                    <p>
+<!--                        Modelling and digital art? <br>-->
+<!--                        Biomedical illustration?-->
+                    </p>
+                </div>
+                <div class="col span-1-of-3">
+                    <p>
+                        For my master's thesis I explored something new and out of my comfort zone, machine learning! Check it out <span><a target="_blank" href="https://scholarworks.rit.edu/theses/10168/">here</a></span>.
+                    </p>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="section-projects clearfix">
+            <div class="row">
+                <h2>Projects</h2>
+                <hr>
+            </div>
+            <div class="slideshow-container">
+                <div class="slideshow-image-holder">
                     
+                    <img class="slideImage showing" id="img1" src="http://4.bp.blogspot.com/-euzhczyVauA/VVawUfF_KHI/AAAAAAAAAFo/8M6AGJq3HC8/s1600/Ward_Lmax1000.jpg"/>
+                    
+                    <img class="slideImage" id="img2" src="https://raw.githubusercontent.com/vraman3/AvatarProjection_Visual_Only/master/IMG_0777.JPG"/>
+                    
+                    <img class="slideImage" id="img3" src="images/FinalScene05.png">
+                    
+<!--                    <img class="slideImage" id="img4" src="images/header-bg-4.jpg">-->
+                    
+                    <div class="image-footer">
+                        <div class="image-caption-container">
+                            <p class="image-caption-p showing" id="caption1">Renderer in C++ using raytracing</p>
+                            <p class="image-caption-p" id="caption2">Unity project showcased at Rochester Street Light Festival 2015</p>
+                            <p  class="image-caption-p" id="caption3">Case study on HDR rendering in Unity</p>
+<!--                            <p  class="image-caption-p" id="caption4">Image 4</p>-->
+                        </div>
+                        
+                        <!-- The dots/circles -->
+                        <div class="slideshow-buttons-container clearfix">
+                            <ul class="carousel-dots-ul">
+                            </ul>
+                            
+                            <a class="prev" id="prevSlide">&#10094;</a>
+                            
+                            <a class="next" id="nextSlide">&#10095;</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!--/.row-->
-        </div>
-        <!--/.container-->
-    </div>
-    <!--/.#headerwrap-->
-
-    <section id="about" name="about"></section>
-    <div class="about">
-        <div class="container">
+        </section>
+        
+        <section class="section-experience">
             <div class="row">
-                <div class="col-lg-2 col-lg-offset-1">
-                    <h5>ABOUT</h5>
+                <h2>Experience</h2>
+                <hr>
+                <h3>Career</h3>
+                <div class="career">
+                    <div class="career-row">
+                        <div class="col span-3-of-8">
+                            <h4>Sterling Medical Devices</h4>
+                            <h5>April 2018 - September 2018</h5>
+                        </div>
+                        <div class="col span-5-of-8">
+                            <h4>Software Engineer</h4>
+                            <p>
+                                Developed front end and back end using C# WPF in an application to be used for clinical trial, using the MVVM architecture.<br>
+                                Performed static analysis and unit testing using SciTools Understand and Tessy 4.0 on a native C code base.<br>
+                                Prepared documents required for 510(k) submissions to the FDA using company guidelines.<br>
+                                Followed agile development using Polarion.<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="career-row">
+                        <div class="col span-3-of-8">
+                            <h4>Baxter International Inc.</h4>
+                            <h5>September 2015 - August 2016</h5>
+                        </div>
+                        <div class="col span-5-of-8">
+                            <h4>Software Engineer</h4>
+                            <p>
+                                Developed software for the SIGMA Spectrum Infusion Pump.<br>
+                                Debugged and develop WiFi protocols (TCP/UDP) for Pump interaction.<br>
+                                Created GUI for pump interface using C# WPF and LINQ.<br>
+                                Automated software test procedures using C# for Master Drug Library Editor (MDL).<br>
+                                Followed agile development using JIRA.<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="career-row">
+                        <div class="col span-3-of-8">
+                            <h4>Dr. Joe Geigel</h4>
+                            <h4>Rochester Institute of Technology</h4>
+                            <h5>September 2014 - September 2015</h5>
+                        </div>
+                        <div class="col span-5-of-8">
+                            <h4>Research Assistant</h4>
+                            <p>
+                                Contributor to the publication that stemmed from this research project: "Dynamic Functional Assessment of Hand Motion Using an Animation Glove: The Effect of Stenosing Tenosynovitis." Oct 2017.<br>
+                                Helped run the CyberGlove II for capturing joint velocities and range of motion of hands, to treat carpal tunnel syndrome and trigger finger, using Qt.<br>
+                                Wrote scripts as required to run and record the CyberGlove MoCap software.<br>
+                                Interacted with the doctors from University of Rochester and CyberGlove to decide requirements and feasibility. (Qt, C++, Python)<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="career-row">
+                        <div class="col span-3-of-8">
+                            <h4>Dr. Joe Geigel</h4>
+                            <h4>Rochester Institute of Technology</h4>
+                            <h5>January 2015 - May 2015</h5>
+                        </div>
+                        <div class="col span-5-of-8">
+                            <h4>Research Assistant</h4>
+                            <p>
+                                Attempt to integrate Faceshift Studio (now discontinued) and The Eye Tribe to create real time mapping of facial features and eye gaze using virtual world clients.
+                                Setting up OpenSimulator and Firestorm.<br>
+                                Worked with a modeler (Dr. Marla Schweppe) to identify and get the correct blendshapes for importing into Unity 3D.<br>
+                                A part of this project was used at the Rochester Street Light Festival. An actor sat in front of a sensor, whose facial features controlled a custom model projected on the face of a building. (Video or pictures available upon request)<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="career-row">
+                        <div class="col span-3-of-8">
+                            <h4>Dr. Linwei Wang</h4>
+                            <h4>Rochester Institute of Technology</h4>
+                            <h5>June 2014 - January 2015</h5>
+                        </div>
+                        <div class="col span-5-of-8">
+                            <h4>Research Assistant</h4>
+                            <p>
+                                Application and analysis of existing machine learning techniques to predict the ablation site for treatment of ventricular tachycardia.<br>
+                                Application of algorithms like lasso, ridge regression, multi-task learning.<br>
+                                Pre-processing and analysis of ECG waveforms (detrending, denoising, constant offset, etc)<br>
+                                Master's thesis topic.
+                                (MATLAB, Python)<br>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <p>Hey there! I am a software developer interested in computational biology, machine learning,
-                        graphics programming, medical devices and the healthcare industry, and hardware development.<br /><br />
-
-                        I have experience with a wide variety of programming languages. My most comfortable language is
-                        C++. Professionally I have used C# WPF the most. For my research projects I have extensively
-                        used Matlab and Python. Currently I am teaching myself JavaScript along with HTML/CSS to
-                        develop my website.
-                    </p>
+                <hr>
+                <h3>Education</h3>
+                <div class="education">
+                    <div class="education-row">
+                        <div class="col span-3-of-8">
+                            <h4>Rochester Institute of Technology</h4>
+                            <h5>May 2019</h5>
+                        </div>
+                        <div class="col span-5-of-8">
+                            <h4>Master of Science, Computer Science</h4>
+                            <p>
+                                Specialized in the graphics cluster and pursued a thesis in machine learning. Held multiple research assistantships and collaborated on many side projects.<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="education-row">
+                        <div class="col span-3-of-8">
+                            <h4>University of Mumbai</h4>
+                            <h5>December 2012</h5>
+                        </div>
+                        <div class="col span-5-of-8">
+                            <h4>Bachelor of Engineering, Computer Engineering</h4>
+                            <p>
+                                Covered basics of programming, database systems, digital signals and image procesing, computer architecture, and computer networks. Participated in the annual robotics festival as a volunteer and event head.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!--/.row-->
-        </div>
-        <!--/.container-->
-    </div>
-    <!--/ #intro-->
-
-    <!-- Master's thesis SECTION -->
-    <div class="container thesis">
-        <div class="row">
-
-            <div class="col-lg-2 col-lg-offset-1">
-                <h5>MASTER's THESIS</h5>
-            </div>
-            <!-- EDIT: thesis line 1 -->
-            <div class="col-lg-6">
-                <p class="tight">
-                    <t>Prediction of ablation site in post infarction patients with ventricular tachycardia using machine learning. </t><br />
-                    Dr. Linwei Wang<br />
-                    <company>Rochester Institute of Technology </company><br />
-                </p>
-                <p>
-                    <more>
-                        <ul>
-                            <li>Processed electrocardiogram (ECG) data using detrending, denoising, etc and annotated onset and offset of QRS complex.</li>
-                            <li>Compare and analyzed different multi-task learning methods where each patient is considered one task.</li>
-                            <li>Ran baseline algorithms like lasso regression for comparison.</li>
-                            <li>Used basic Bash on linux to test and run the public databases on Physionet</li>
-                            <li>All experiments were run using the in-built machine learning packages in Matlab and the scikit-learn package in Python</li>
-                        </ul>
-                    </more>
-                </p>
-            </div>
-            <div class="col-lg-3">
-                <p>
-                    <sm>February 2019 <br />
-                        Rochester, NY, USA</sm>
-                </p>
-            </div>
-        </div>
-        <!--/.row -->
-        <br>
-        <hr>
-    </div>
-    <!--/.container -->
-
-    <!-- WORK SECTION -->
-    <div class="container work">
-        <div class="row">
-
-            <div class="col-lg-2 col-lg-offset-1">
-                <h5>WORK</h5>
-            </div>
-            <!-- EDIT: work line 1 -->
-            <div class="col-lg-6">
-                <p class="tight">
-                    <t>Software Engineer </t><br />
-                    <company>Sterling Medical Devices</company><br />
-                </p>
-                <p>
-                    <more>
-                        <ul>
-                            <li>Developed front end and back end using C# WPF in an application to be used for clinical
-                                trial, using the MVVM architecture.</li>
-                            <li>Performed static analysis and unit testing using SciTools Understand and Tessy 4.0 on a
-                                native C code base.</li>
-                            <li>Prepared documents required for 510(k) submissions to the FDA using company guidelines.</li>
-                        </ul>
-                    </more>
-                </p>
-            </div>
-            <div class="col-lg-3">
-                <p>
-                    <sm>April 2018 - September 2018 <br />
-                        Rochelle Park, New Jersey, USA</sm>
-                </p>
-            </div>
-
-            <!-- EDIT: work line 2-->
-            <div class="col-lg-6 col-lg-offset-3">
-                <p class="tight">
-                    <t>Software Engineer</t><br />
-                    <company>Baxter International Inc.</company><br />
-                </p>
-                <p>
-                    <more>
-                        <ul>
-                            <li>Started inital development and feasibility study to automate the test procedures for
-                                Master Drug Library Editor (MDL).</li>
-                            <li>Primarily developed software for the SIGMA Spectrum Infusion Pump using C# WPF.</li>
-                            <li>Helped debug and implement the newer WiFi protocols for the pumps. Used Wireshark to
-                                track and analyze the TCP/UDP packet interaction on the network.</li>
-                            <li>Created GUI for pump interface using C# WPF for development and LINQ for database
-                                management.</li>
-                            <li>Helped setup open source environment for embedded programming using the Gnu compiler
-                                with OpenOCD and Eclipse. Testing was done with the STM32F4 Discovery Board.</li>
-                            <li>Followed agile development using JIRA.</li>
-                        </ul>
-                    </more>
-                </p>
-            </div>
-            <div class="col-lg-3">
-                <p>
-                    <sm>September 2015 - August 2016 <br />
-                        Medina, New York, USA</sm>
-                </p>
-            </div>
-
-            <!-- EDIT: work line 3 -->
-            <div class="col-lg-6 col-lg-offset-3">
-                <p class="tight">
-                    <t>Research Assistant</t><br />
-                    Dr. Joe Geigel<br />
-                    <company>Rochester Institute of Technology</company><br />
-                </p>
-                <p>
-                    <more>
-                        <ul>
-                            <li>Contributor to the published paper from this study "Dynamic Functional Assessment of
-                                Hand Motion Using an Animation Glove: The Effect of Stenosing Tenosynovitis." Oct 2017.</li>
-                            <li>Collaborated with doctors from University of Rochester to use an augmented reality
-                                device, the CyberGlove II, to try and diagnose trigger finger patients.</li>
-                            <li>Furthered development so both gloves (right and left) could be used to collect data.</li>
-                            <li>Performed data collection to collect the data required for the study. Involved
-                                conversion of binary data, video data, as well as graphical data.</li>
-                            <li>Wrote scripts as required to run and record the CyberGlove MoCap software.</li>
-                            <li>Interacted with the doctors from University of Rochester and CyberGlove to decide
-                                requirements and feasibility. (Qt, C++, Python</li>
-                        </ul>
-                    </more>
-                </p>
-            </div>
-            <div class="col-lg-3">
-                <p>
-                    <sm>September 2014 - September 2015 <br />
-                        Rochester Institute of Technology, Rochester, New York, USA</sm>
-                </p>
-            </div>
-
-            <!-- EDIT: work line 4 -->
-            <div class="col-lg-6 col-lg-offset-3">
-                <p class="tight">
-                    <t>Research Assistant</t><br />
-                    Dr. Joe Geigel<br />
-                    <company>Rochester Institute of Technology</company><br />
-                </p>
-                <p>
-                    <more>
-                        <ul>
-                            <li>Attempt to integrate Faceshift Studio (now discontinued) and The Eye Tribe to create
-                                real time mapping of facial features and eye gaze using virtual world clients.</li>
-                            <li>Setting up OpenSimulator and Firestorm.</li>
-                            <li>Worked with a modeler (Dr. Marla Schweppe) to identify and get the correct blendshapes
-                                for importing into Unity 3D.</li>
-                            <li>A part of this project was used at the Rochester Street Light Festival. An actor sat in
-                                front of a sensor, whose facial features controlled a custom model projected on the
-                                face of a building. (Video or pictures available upon request)</li>
-                        </ul>
-                    </more>
-                </p>
-            </div>
-            <div class="col-lg-3">
-                <p>
-                    <sm>January 2015 - May 2015 <br />
-                        Rochester Institute of Technology, Rochester, New York, USA</sm>
-                </p>
-            </div>
-
-            <!-- EDIT: work line 5 -->
-            <div class="col-lg-6  col-lg-offset-3">
-                <p class="tight">
-                    <t>Research Assistant</t><br />
-                    Dr. Linwei Wang<br />
-                    <company>Rochester Institute of Technology</company><br />
-                </p>
-                <p>
-                    <more>
-                        <ul>
-                            <li>Master's thesis topic.</li>
-                            <li>Application and analysis of existing machine learning techniques to predict the
-                                ablation site for treatment of ventricular tachycardia.</li>
-                            <li>Application of algorithms like lasso, ridge regression, multi-task learning.</li>
-                            <li>Pre-processing and analysis of ECG waveforms (detrending, denoising, constant offset,
-                                etc).</li>
-                            <li>Used unbuilt machine learning support in MATLAB and the scikit-learn package in Python)</li>
-                        </ul>
-                    </more>
-                </p>
-            </div>
-            <div class="col-lg-3">
-                <p>
-                    <sm>June 2014 - January 2015 <br />
-                        Rochester Institute of Technology, Rochester, New York, USA</sm>
-                </p>
-            </div>
-        </div>
-        <!--/.row -->
-        <br>
-        <hr>
-    </div>
-    <!--/.container -->
-
-    <section id="resume" name="resume"></section>
-    <!-- EDUCATION SECTION -->
-    <div class="container desc">
-        <div class="row">
-
-            <div class="col-lg-2 col-lg-offset-1">
-                <h5>EDUCATION</h5>
-            </div>
-            <!-- EDIT: education line 1 -->
-            <div class="col-lg-6">
-                <p>
-                    <t>Master of Science, Computer Science</t><br />
-                    Rochester Institute of Technology, Rochester, New York, USA
-                    <!--<br/><i>Extra info here</i>-->
-                </p>
-            </div>
-            <div class="col-lg-3">
-                <p>
-                    <span>
-                        <sm>Expected February 2019</sm><br />
-                        <imp>
-                            <sm>IN PROGRESS</sm>
-                        </imp>
-                    </span>
-                </p>
-            </div>
-            <!-- EDIT: education line 2 -->
-            <div class="col-lg-6 col-lg-offset-3">
-                <p>
-                    <t>Bachelor of Science, Computer Engineer</t><br />
-                    University of Mumbai, Mumbai, Maharashtra, India
-                    <!--<br/><i>Extra info here</i>-->
-                </p>
-            </div>
-            <div class="col-lg-3">
-                <p>
-                    <sm>JULY 2012</sm>
-                </p>
-            </div>
-
-        </div>
-        <!--/.row -->
-        <br>
-        <hr>
-    </div>
-    <!--/.container -->
-    <!-- PROJECTS SECTION -->
-    <div class="container project">
-        <div class="row">
-            <div class="col-lg-2 col-lg-offset-1">
-                <h5>PROJECTS</h5>
-            </div>
-
-            <!-- EDIT: projects line 1-->
-            <div class="col-lg-6">
-                <p>
-                    <t>Renderer in C++ using ray tracing</t><br />
-                </p>
-                <p>
-                    <more>
-                        <ul>
-                            <li>Started as a required project for a graduate course, Global Illumination, which has
-                                remained an active interest.</li>
-                            <li>Created with C++, Microsoft Visual Studio on the Microsoft Windows platform.</li>
-                        </ul>
-                    </more>
-                </p>
-            </div>
-
-            <!-- EDIT: projects line 2-->
-            <div class="col-lg-6 col-lg-offset-3">
-                <p class="tight">
-                    <t>Chess game demo in Linux showcasing aspect oriented programming in C++</t><br />
-                </p>
-                <p>
-                    <more>
-                        <ul>
-                            <li>Created a demo chess game for a graduate course to showcase aspect oriented
-                                programming.</li>
-                            <li>Was developed with C++ and AspectC++ on the Ubuntu Linux platform.</li>
-                        </ul>
-
-                    </more>
-                </p>
-            </div>
-
-            <!-- EDIT: projects line 2-->
-            <div class="col-lg-6 col-lg-offset-3">
-                <p class="tight">
-                    <t>Parser and renderer in Java</t><br />
-                </p>
-                <p>
-                    <more>
-                        <ul>
-                            <li>Created renderer and parser for a graduate course as first project in the graphics.</li>
-                            <li>Was developed with JOGL, Eclipse, and Java on the Microsoft Windows platform.</li>
-                        </ul>
-                    </more>
-                </p>
-            </div>
-
-            <!-- EDIT: projects line 2-->
-            <div class="col-lg-6 col-lg-offset-3">
-                <p class="tight">
-                    <t>Gestural Music using Microsoft Kinect (<i>Team Project</i>)</t><br />
-                </p>
-                <p>
-                    <more>
-                        <ul>
-                            <li>Collaborated for a graduate course with three more members to develop an application
-                                that plays musical notes using gestures.</li>
-                            <li>Was developed with C#, Ableton, Microsoft Visual Studio on the Microsoft Windows
-                                platform.</li>
-                        </ul>
-                    </more>
-                </p>
-            </div>
-
-        </div>
-        <!--/.row -->
-        <br>
-    </div>
-    <!--/.container -->
-
-    <section id="contact" name="contact"></section>
-    <!--FOOTER DESCRIPTION -->
-    <div id="footwrap" class="footer">
-        <div class="container">
+        </section>
+        
+        <section class="section-skills">
             <div class="row">
-
-                <div class="col-lg-2 col-lg-offset-1">
-                    <h5>CONTACT</h5>
+                <h2>Skills</h2>
+                <hr>
+            </div>
+            <h3>Programming Languages</h3>
+            <div class="programming-languages skill-subsection clearfix">
+                <div class="col span-4-of-8 skill-column-1">
+                    <ul class="no-list-style">
+                        <li>
+                            <span class="skill-name">C++</span>
+                            <span class="skill-score">
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star score-icon"></span>
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-name">C#</span>
+                            <span class="skill-score">
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star score-icon"></span>
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star-half score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-name">Python</span>
+                            <span class="skill-score">
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star score-icon"></span>
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star-half score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-name">MATLAB</span>
+                            <span class="skill-score">
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star score-icon"></span>
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star-half score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-name">Javascript</span>
+                            <span class="skill-score">
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star score-icon"></span>
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                            </span>
+                        </li>
+                    </ul>
                 </div>
-                <!-- EDIT: email -->
-                <div class="col-lg-6">
-                    <p>
-                        <t>Email</t><br />
-                        <a href="mailto:vishwanath.raman3@gmail.com" class="mail">vishwanath.raman3@gmail.com</a> <br />
-                    </p>
-                    <!-- EDIT: phone number -->
-                    <p>
-                        <t>Phone</t><br />
-                        <a href="tel:5852149240" class="tel">(585)214-9240</a> <br />
-                    </p>
-                </div>
-                <div class="col-lg-3">
-                    <p>
-                        <sm>SOCIAL LINKS</sm>
-                    </p>
-                    <p>
-                        <!-- EDIT: Social Links. Replace # with your URL for each -->
-                        <a href="https://github.com/vraman3" target="_blank"><i class="icon-github"></i></a>
-                        <a href="https://www.linkedin.com/in/vishwanath-raman-319230b4/" target="_blank"><i class="icon-linkedin"></i></a>
-                    </p>
+                <div class="col span-4-of-8 skill-column-2">
+                    <ul class="no-list-style">
+                        <li>
+                            <span class="skill-name">HTML</span>
+                            <span class="skill-score">
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star score-icon"></span>
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-name">CSS</span>
+                            <span class="skill-score">
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star score-icon"></span>
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                            </span>
+                        </li>                  
+<!--
+                        <li>
+                            <span class="skill-name">ReactJS</span>
+                            <span class="skill-score">
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star score-icon"></span>
+                                <span class="ion-ios-star-half score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                            </span>
+                        </li>
+-->
+                        <li>
+                            <span class="skill-name">Kotlin</span>
+                            <span class="skill-score">
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star-half score-icon"></span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                            </span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <!--/.row -->
-        </div>
-        <!--/.container -->
-    </div>
-    <!--/ #footer -->
-
-</body>
-
+            
+            <hr>
+            <h3>Tools & Frameworks</h3>
+            <div class="tools-and-frameworks skill-subsection clearfix">
+                <div class="col span-4-of-8 skill-column-1">
+                    <ul class="no-list-style">
+                        <li>
+                            <span class="skill-name">Git</span>
+                        </li>
+                        <li>
+                            <span class="skill-name">Subversion</span>
+                        </li>
+                        <li>
+                            <span class="skill-name">JIRA</span>
+                        </li>
+                        <li>
+                            <span class="skill-name">Polarion</span>
+                        </li>
+                        <li>
+                            <span class="skill-name">Scitools  Understand</span>
+                        </li>
+                        <li>
+                            <span class="skill-name">Tessy 4.0</span>
+                        </li>
+                        <li>
+                            <span class="skill-name">WireShark</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col span-4-of-8 skill-column-2">
+                    <ul class="no-list-style">
+                        <li>
+                            <span class="skill-name">Blender</span>
+                        </li>
+                        <li>
+                            <span class="skill-name">Autodesk Maya</span>
+                        </li>
+                        <li>
+                            <span class="skill-name">Visual Studio</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr>
+            <h3>Natural Languages</h3>
+            <div class="natural-languages skill-subsection clearfix">
+                <div class="col span-4-of-8 skill-column-1">
+                    <ul class="no-list-style">
+                        <li>
+                            <span class="skill-name">Tamil (Mothertongue)</span>
+                            <span class="skill-score">
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star score-icon"></span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-name">Hindi</span>
+                            <span class="skill-score">
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star score-icon"></span>
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-name">Marathi</span>
+                            <span class="skill-score">
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star score-icon"></span>
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col span-4-of-8 skill-column-2">
+                    <ul class="no-list-style">
+                        <li>
+                            <span class="skill-name">English (Full Professional Fluency)</span>
+                            <span class="skill-score">
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star score-icon"></span>
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-name">French (Learning)</span>
+                            <span class="skill-score">
+                                <span class="ion-ios-star score-icon">
+                                </span>
+                                <span class="ion-ios-star score-icon"></span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                                <span class="ion-ios-star-outline score-icon">
+                                </span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        
+        <footer>
+            <h2>Contact</h2>
+<!--            <hr>-->
+            
+            <div>
+                <ul class="footer-nav">
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">Gmail</a></li>
+                </ul>
+            </div>
+                
+        </footer>
+        
+    </body>
 </html>
