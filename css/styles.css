@@ -21,16 +21,22 @@ hr {
     border-top: 1px solid black;
 }
 
-h3 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
 div {
     box-sizing: border-box;
 }
 
 section {
     padding: 40px 180px;
+}
+
+/* REUSABLE COMPONENTS */
+
+.row {
+    
+}
+
+.no-list-style {
+    list-style: none;
 }
 
 .clearfix:after {
@@ -48,16 +54,6 @@ section {
     text-align: center;
     color:darkcyan;
 }
-/* REUSABLE COMPONENTS */
-.row {
-    
-}
-
-.no-list-style {
-    list-style: none;
-}
-
-
 
 /* HEADINGS */
 
@@ -75,9 +71,15 @@ h1 {
 }
 
 h2 {
+    font-size: 337.5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h3 {
     margin-top: 20px;
     margin-bottom: 20px;
-    text-align: center;
 }
 
 /* LINKS */
@@ -89,7 +91,7 @@ a:visited {
 /*    border-bottom: 1px solid #cf6e22;*/
 }
 
-/* HEADER */
+/* Section - HEADER */
 
 header {
     background-image: url(img/header-bg.jpg);
@@ -142,10 +144,6 @@ header {
 
 /* Section 2 - About Me */
 
-.section-aboutme h2 {
-    padding-bottom: 40px;
-}
-
 .section-aboutme p {
     text-align: justify;
 }
@@ -156,34 +154,13 @@ header {
     background: #fafafa;
 }
 
-.section-projects h2{
-    padding-bottom: 40px;
-}
-
 .slideshow-container {
     padding-top: 40px;
     text-align: center;
-/*
-    width: 600px;
-    height: 360px;
-    float: left;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    overflow: hidden;
-*/
 }
 
 .slideshow-image-holder {
     text-align: center;
-/*
-    width: 640px;
-    height: 511px;
-    position: relative;
-    left: 30%;
-    display: inline-block;
-    z-index: 1;
-*/
 }
 
 .slideshow-image-holder img {
@@ -221,8 +198,6 @@ header {
 }
 
 .slideshow-buttons-container {
-/*    display: inline-block;*/
-/*    text-align: center;*/
 }
 
 .carousel-dots-ul{
@@ -277,12 +252,6 @@ header {
     
 }
 
-.section-experience h2 {
-    padding-bottom: 40px;
-}
-
-
-
 /* Section 5 - Skills */
 
 .section-skills {
@@ -329,10 +298,8 @@ ul > li .skill-score {
 
 /* Section  - Footer */
 
-
 footer {
-    /* For debug only */
-    border: 1px solid;
+    padding-top: 40px;
 }
 
 .footer-nav {
