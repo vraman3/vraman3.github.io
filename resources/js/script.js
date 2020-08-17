@@ -84,6 +84,8 @@ $(document).ready(function () {
         
         // Make the caption corresponding to the nav dot visible
         $(currentCaption).removeClass("hiding").addClass("showing");
+        
+        slideTimer.reset();
     });
     
     $(".prev").click(function () {

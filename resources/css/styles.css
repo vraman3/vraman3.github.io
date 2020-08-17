@@ -154,7 +154,9 @@ header {
     text-align: justify;
 }
 
-/* Section 3 - Projects */
+/************************************************/
+/************* Section 3 - Projects *************/
+/************************************************/
 
 .section-projects {
     background: #fafafa;
@@ -165,6 +167,61 @@ header {
     text-align: center;
 }
 
+.slideshowToggleContainer {
+    
+}
+
+.toggleSwitchLabel {
+    position: relative;
+    width: 60px;
+    height: 34px;
+}
+
+.toggleSwitchInput {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggleSwitchSpan {
+/*    display: inline-block;*/
+/*
+    width: 42px;
+    height: 20px;
+*/
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #eee;
+    border-radius: 20px;
+}
+
+.toggleSwitchSpan::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    background-color: black;
+    transition: all 0.3s;
+}
+
+.toggleSwitchInput:checked + .toggleSwitchSpan::before {
+    transform: translateX(26px);
+}
+
+.toggleSwitchInput:checked + .toggleSwitchSpan {
+    background-color: #7983ff;
+}
+
+.toggleSwitchInput {
+    
+}
 .slideshow-image-holder {
     text-align: center;
 }
