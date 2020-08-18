@@ -24,11 +24,12 @@ function SlideshowTimer(func, interval) {
     }
 }
 
+
 $(document).ready(function () {
     
     var slideTimer = new SlideshowTimer(function() {
         $(".next").trigger("click");
-    }, 5000);
+    }, 4000);
     
     var numImgs = $('div.slideshow-image-holder img').length;
     
@@ -49,6 +50,17 @@ $(document).ready(function () {
     }
     
     $(".slideshow-buttons-container").find("li").first().addClass("active");
+    
+    $('#slideshowToggleInput').on('click', function() {
+        if($(this).prop('checked')) {
+            console.log("toggle start")
+            slideTimer.start();
+        }
+        else {
+            console.log("toggle stop")
+            slideTimer.stop();
+        }
+    });
     
     $(".carousel-dots-li").click(function () {
 
@@ -164,7 +176,6 @@ $(document).ready(function () {
         slideTimer.reset();
     });
 });
-
 
     removeExistingImagesAndNavigationDots = function (selectedImage, selectedCaption, selectedImageNavDotId) {
 
