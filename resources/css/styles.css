@@ -9,7 +9,7 @@
 html,
 body {
     background-color: #f2f2f2;
-    font-family: 'Raleway', 'Lato', sans-serif; /* OPTIONAL: Google Fonts - base font */
+    font-family: 'Raleway', 'Lato', sans-serif;  OPTIONAL: Google Fonts - base font 
     font-weight: 300;
     font-size: 16px;
     line-height: 1.75;
@@ -143,7 +143,8 @@ header {
     z-index: 1;
     padding: 20px;
     margin: -0px;
-    color:darkslateblue;
+/*    color: darkslateblue;*/
+    color: white;
     text-decoration: none;
     font-size: 150%;
 }
