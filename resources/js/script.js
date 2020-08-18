@@ -53,11 +53,9 @@ $(document).ready(function () {
     
     $('#slideshowToggleInput').on('click', function() {
         if($(this).prop('checked')) {
-            console.log("toggle start")
             slideTimer.start();
         }
         else {
-            console.log("toggle stop")
             slideTimer.stop();
         }
     });
@@ -79,7 +77,7 @@ $(document).ready(function () {
         var currentImg = "#" + imgContainerHandle.getElementsByTagName("img")[findTheNumb - 1].getAttribute("id");
         
         // Remove any images that are showing
-        $('.slideImage:not(' + currentImg + ')').removeClass("showing").addClass("hiding");
+        $('.slide-image:not(' + currentImg + ')').removeClass("showing").addClass("hiding");
         
         // Make the image corresponding to the nav dot visible
         $(currentImg).removeClass("hiding").addClass("showing");
@@ -180,7 +178,7 @@ $(document).ready(function () {
     removeExistingImagesAndNavigationDots = function (selectedImage, selectedCaption, selectedImageNavDotId) {
 
         // Remove any images that are not selectedImg & their nav dot
-        $('.slideImage:not(' + selectedImage + ')').removeClass("showing").addClass("hiding");
+        $('.slide-image:not(' + selectedImage + ')').removeClass("showing").addClass("hiding");
         
         $("#" + selectedImageNavDotId).removeClass("active");
         

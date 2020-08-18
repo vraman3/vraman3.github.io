@@ -244,14 +244,14 @@ header {
     border-radius: 5%;
 }
 
-.slideImage.showing {
+.slide-image.showing {
     width: 640px;
     height: 411px;
     transition: opacity .5s ease-out;
     display: inline-block;
 }
 
-.slideImage.hiding {
+.slide-image.hiding {
     transition: opacity .5s ease-out;
     display: none;
 }
