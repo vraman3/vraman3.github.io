@@ -18,7 +18,7 @@ body {
 }
 
 hr {
-    margin: 40px 0;
+    margin: 10px 0;
     border: 0;
     border-top: 1px solid black;
 }
@@ -28,7 +28,7 @@ div {
 }
 
 section {
-    padding: 40px 180px;
+    padding: 30px 180px;
 }
 
 /************************************************/
@@ -67,20 +67,22 @@ h1,
 h2,
 h3{
     font-weight: 300;
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
 }
 
 h1 {
-    font-size: 300%;
+    font-size: 350%;
     color: white;
     word-spacing: 4px;
     letter-spacing: 1px;
 }
 
 h2 {
-    font-size: 337.5%;
+    font-size: 250%;
+/*
     margin-top: 10px;
     margin-bottom: 10px;
+*/
     text-align: center;
 }
 
@@ -128,9 +130,7 @@ header {
     transform: translate(-50%,-50%)
 }
 
-/************************************************/
-/************* Section 0 - Main Nav *************/
-/************************************************/
+/************* Section 1 - Main Nav *************/
 
 .header-nav {
     margin-top: auto;
@@ -159,10 +159,17 @@ header {
     font-size: 150%;
 }
 
-/* Section 2 - About Me */
+/************************************************/
+/************* Section 2 - About Me *************/
+/************************************************/
 
+.section-aboutme {
+/*    padding: 0px 180px;*/
+    height: 100vh;
+}
 .section-aboutme p {
     text-align: justify;
+    
 }
 
 /************************************************/
@@ -170,7 +177,9 @@ header {
 /************************************************/
 
 .section-projects {
-    background: #fafafa;
+/*    background: #fff;*/
+    background: #e3e3e3;
+    height: 100vh;
 }
 
 .slideshow-container {
@@ -257,7 +266,7 @@ header {
 
 .slide-image.showing {
     width: 640px;
-    height: 411px;
+    height: 400px;
     transition: opacity .5s ease-out;
     display: inline-block;
 }
@@ -347,7 +356,7 @@ header {
 /************************************************/
 
 .section-skills {
-    background: #fafafa;
+    background: #e3e3e3;
 }
 
 ul > li .skill-name {
@@ -371,6 +380,7 @@ ul > li .skill-score {
     padding-right: 15px;
     padding-left: 15px;
 }
+
 .skill-column-2{
     position: relative;
     padding-right: 15px;
