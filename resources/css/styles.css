@@ -28,7 +28,7 @@ div {
 }
 
 section {
-    padding: 30px 180px;
+    padding: 30px 210px;
 }
 
 /************************************************/
@@ -164,37 +164,52 @@ header {
 /************************************************/
 
 .section-aboutme {
-    margin-right: 3%;
-    margin-left: 3%;
-    /*    height: 100vh;*/
+/*    margin-right: 3%;*/
+/*    margin-left: 3%;*/
 }
 
 .section-aboutme p {
     padding-top: 30px;
-    text-align: justify;
-    
+    text-align: left;
+}
+
+.section-aboutme .col:first-of-type {
+    padding-left: 0px;
 }
 
 .section-aboutme .col {
     padding-left: 10px;
     padding-right: 10px;
+    min-height: 250px;
 }
 
-
-/*.display-photo {*/
 .col2 {
-/*    padding-top: 20%;*/
+    position: relative;
+}
+
+.col2 img {
+/*    padding-top: 50px;*/
+    margin-top: 12%;
     width: 250px;
     height: 250px;
-    vertical-align: middle;
     border-radius: 50%;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/audi_a4_sketch_by_bloodhound3_d2df15f.jpg);
-    
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    -webkit-mask-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75))
 }
 
+.col3 {
+    padding-top: 30px;
+}
+
+/*
+.col2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/IMG_7801_cu.JPG);
+    background-size: contain;
+    background-position: center;
+}
+*/
 
 .hover-background {
     min-height: 100px;
@@ -205,10 +220,7 @@ header {
 /************************************************/
 
 .section-projects {
-/*    background: #fff;*/
     background: #e3e3e3;
-    height: calc(100vh - calc(100vh - 100%)); 
-/*        100vh;*/
 }
 
 .slideshow-container {
@@ -333,7 +345,7 @@ header {
 }
 
 .carousel-dots-li {
-    background-color: #ddd;
+    background-color: #939393;
     height: 18px;
     width: 18px;
     border-radius: 50%;
@@ -348,7 +360,7 @@ header {
 }
 
 .carousel-dots-li.active {
-    background-color: coral;
+    background-color: darkcyan;
 }
 
 /*
