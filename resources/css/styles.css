@@ -213,8 +213,9 @@ header {
 .slideshow-toggle-container {
     position: absolute;
     width: 120px;
-    height: 110px;
-    vertical-align: middle;
+    height: 70px;
+    /* vertical-align: middle; */
+    
     display: inline-block;
 }
 
@@ -229,9 +230,10 @@ header {
 
 .slideshow-toggle-label {
     position: absolute;
+    top: 25%;;
     display: inline-block;
-    width: 34px;
-    height: 60px;
+    width: 60px;
+    height: 34px;
 }
 
 .slideshow-toggle-label:hover + .slideshow-toggle-info{
@@ -270,7 +272,7 @@ header {
 }
 
 .slideshow-toggle-input:checked + .slideshow-toggle-span::before {
-    transform: translateY(-26px);
+    transform: translateX(26px);
 }
 
 .slideshow-toggle-input:checked + .slideshow-toggle-span {
