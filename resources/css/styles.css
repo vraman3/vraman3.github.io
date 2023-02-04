@@ -186,6 +186,24 @@ header {
     height: 100vh;
 }
 
+.project-header{
+    /*position: absolute;
+     top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.slideshow-header {
+    text-align: center;
+    letter-spacing: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .slideshow-container {
     padding-top: 40px;
     text-align: center;
@@ -196,6 +214,8 @@ header {
     position: absolute;
     width: 120px;
     height: 110px;
+    vertical-align: middle;
+    display: inline-block;
 }
 
 .slideshow-toggle-info {
