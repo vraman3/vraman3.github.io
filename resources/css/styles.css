@@ -172,7 +172,7 @@ header {
 
 .section-aboutme {
   /*    padding: 0px 180px;*/
-  height: 100vh;
+  height: 100%;
 }
 /* .section-aboutme p {
   text-align: justify;
