@@ -213,6 +213,24 @@ header {
   transition: all 0.2s ease;
 }
 
+.vertical-nav li:hover > a {
+  background: #fafafa;
+  transition: all 0.2s ease;
+}
+
+.vertical-nav li:hover > a ion-icon {
+  transform: scale(2);
+  transition: all 0.2s ease;
+}
+
+.vertical-nav li:hover > .onclick-list,
+.vertical-nav li:focus-within > .onclick-list {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s ease;
+  display: block;
+}
+
 .vertical-nav li .onclick-list {
   background: white;
   visibility: hidden;
@@ -220,17 +238,12 @@ header {
   opacity: 0;
   display: none;
   position: absolute;
-  left: 70px;
+  left: 80px;
   min-width: 200px;
   margin: 0;
   padding: 0;
   top: 0;
   box-shadow: 0 0 40px #00000021;
-}
-
-.vertical-nav li:hover > a {
-  background: #fafafa;
-  transition: all 0.2s ease;
 }
 /************************************************/
 /************* Section 3 - Projects *************/
