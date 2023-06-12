@@ -1,67 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="resources/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendors/css/ionicons.min.css"
+    />
 
-    <head>
-        
-        <link rel="stylesheet" type="text/css" href="resources/css/styles.css">
-        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
-        <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
-        
-        <!-- Bootstrap core CSS -->
-<!--        <link href="vendors/css/bootstrap.css" rel="stylesheet">-->
-        
-        <!-- Fonts -->
-        <link rel='stylesheet' href='vendors/css/lato-v14-latin-regular.css' type='text/css'>
-        <link rel='stylesheet' href='vendors/css/raleway-v12-latin-regular.css' type='text/css'>
-        
-        <!-- Javascript -->
-        <script type="text/javascript" src="vendors/js/jquery-3.4.1.min.js"></script>
-        <script src="resources/js/script.js"></script>
-        <title>Vishwanath Raman's Home Page</title>
-    </head>
-    
-    <body>
-        <header>
-            <div class="header-container">
-                <div class="header-title">
-                    <h1>Vishwanath Raman</h1>
-                    <h5 class="temporary-h5">~Website Under Construction~</h5>
-                </div>
-            
-                <nav class="header-nav">
-                    <ul class="main-nav">
-                        <li> <a href="#">About Me</a>   </li>
-                        <li> <a href="#">Projects</a>   </li>
-                        <li> <a href="#">Experience</a> </li>
-                        <li> <a href="#">Skills</a>     </li>
-<!--                        <li> <a href="#">Languages</a>  </li>-->
-                        <li> <a href="#">Contact</a>    </li>
-                    </ul>
-                </nav>
+    <!-- Bootstrap core CSS -->
+    <!--        <link href="vendors/css/bootstrap.css" rel="stylesheet">-->
+
+    <!-- Fonts -->
+    <link
+      rel="stylesheet"
+      href="vendors/css/lato-v14-latin-regular.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="vendors/css/raleway-v12-latin-regular.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="vendors/css/" <!-- Javascript -- />
+    <script
+      type="text/javascript"
+      src="vendors/js/jquery-3.4.1.min.js"
+    ></script>
+    <script src="resources/js/script.js"></script>
+    <title>Vishwanath Raman's Home Page</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="header-title">
+          <h1>Vishwanath Raman</h1>
+        </div>
+
+        <nav class="header-nav">
+          <ul class="main-nav">
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="section-aboutme clearfix" id="aboutme">
+      <div class="row">
+        <h2>About Me</h2>
+        <hr />
+      </div>
+      <div class="aboutme-menu">
+        <ul class="vertical-nav">
+          <li>
+            <a href="#"><ion-icon name="shuffle"></ion-icon></a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="snow"></ion-icon></a>
+            <div class="onclick-list">
+              <ul>
+                <li><a href="#">javaScript</a></li>
+                <li><a href="#">C++</a></li>
+                <li><a href="#">C#</a></li>
+                <li><a href="#">Kotlin</a></li>
+              </ul>
             </div>
-        </header>
-        
-        <section class="section-aboutme clearfix">
             <div class="row">
-                <h2>About Me</h2>
-                <hr>
-            </div>
-            <div class="row">
-                <div class="col span-1-of-3 col1">
+                <div class="col span-1-of-3">
                     <p>
-                        Hey! I'm a software engineer interested in the fields of computer graphics and biomedical visualization. Recently learnt front-end development and find it a great way to combine design and programming. I'm building this website as a personal library for my engineering projects and as a portfolio for my artistic side. 
+                        I'm a software engineer primarily interested in programming. C++ is my most comfortable language, but I have experience working with other languages such as Python, C#, Matlab, Javascript, and Kotlin. My fields of interest include computer graphics, video games, computational biology, biomedical visualization, biomedical engineering, and machine learning.
                     </p>
                 </div>
-                <div class="col span-1-of-3 col2">
-                    <img src="resources/images/IMG_7801_cu.JPG" />
+                <div class="col span-1-of-3">
+                    <p>
+<!--                        Modelling and digital art? <br>-->
+<!--                        Biomedical illustration?-->
+                    </p>
                 </div>
-                <div class="col span-1-of-3 col3">
-                    <span><a target="_blank" href="https://scholarworks.rit.edu/theses/10168/">here</a></span>
+                <div class="col span-1-of-3">
+                    <p>
+                        For my master's thesis I explored something new and out of my comfort zone, machine learning! Check it out <span><a target="_blank" href="https://scholarworks.rit.edu/theses/10168/">here</a></span>.
+                    </p>
                 </div>
-            </div>
-            <div class="about-me-footer">
-                <div class="hover-background">
-                </div>
+                
             </div>
         </section>
         
@@ -360,165 +386,160 @@
                             </span>
                         </li>
 -->
-                        <li>
-                            <span class="skill-name">Kotlin</span>
-                            <span class="skill-score">
-                                <span class="ion-ios-star score-icon">
-                                </span>
-                                <span class="ion-ios-star-half score-icon"></span>
-                                <span class="ion-ios-star-outline score-icon">
-                                </span>
-                                <span class="ion-ios-star-outline score-icon">
-                                </span>
-                                <span class="ion-ios-star-outline score-icon">
-                                </span>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <hr>
-            <h3>Tools & Frameworks</h3>
-            <div class="tools-and-frameworks skill-subsection clearfix">
-                <div class="col span-4-of-8 skill-column-1">
-                    <ul class="no-list-style">
-                        <li>
-                            <span class="skill-name">Git</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">Subversion</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">JIRA</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">Polarion</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">Scitools  Understand</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">Tessy 4.0</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">WireShark</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col span-4-of-8 skill-column-2">
-                    <ul class="no-list-style">
-                        <li>
-                            <span class="skill-name">Blender</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">Autodesk Maya</span>
-                        </li>
-                        <li>
-                            <span class="skill-name">Visual Studio</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <hr>
-            <h3>Natural Languages</h3>
-            <div class="natural-languages skill-subsection clearfix">
-                <div class="col span-4-of-8 skill-column-1">
-                    <ul class="no-list-style">
-                        <li>
-                            <span class="skill-name">Tamil (Mothertongue)</span>
-                            <span class="skill-score">
-                                <span class="ion-ios-star score-icon">
-                                </span>
-                                <span class="ion-ios-star score-icon"></span>
-                                <span class="ion-ios-star-outline score-icon">
-                                </span>
-                                <span class="ion-ios-star-outline score-icon">
-                                </span>
-                                <span class="ion-ios-star-outline score-icon">
-                                </span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="skill-name">Hindi</span>
-                            <span class="skill-score">
-                                <span class="ion-ios-star score-icon">
-                                </span>
-                                <span class="ion-ios-star score-icon"></span>
-                                <span class="ion-ios-star score-icon">
-                                </span>
-                                <span class="ion-ios-star-outline score-icon">
-                                </span>
-                                <span class="ion-ios-star-outline score-icon">
-                                </span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="skill-name">Marathi</span>
-                            <span class="skill-score">
-                                <span class="ion-ios-star score-icon">
-                                </span>
-                                <span class="ion-ios-star score-icon"></span>
-                                <span class="ion-ios-star score-icon">
-                                </span>
-                                <span class="ion-ios-star-outline score-icon">
-                                </span>
-                                <span class="ion-ios-star-outline score-icon">
-                                </span>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col span-4-of-8 skill-column-2">
-                    <ul class="no-list-style">
-                        <li>
-                            <span class="skill-name">English (Full Professional Fluency)</span>
-                            <span class="skill-score">
-                                <span class="ion-ios-star score-icon">
-                                </span>
-                                <span class="ion-ios-star score-icon"></span>
-                                <span class="ion-ios-star score-icon">
-                                </span>
-                                <span class="ion-ios-star score-icon">
-                                </span>
-                                <span class="ion-ios-star score-icon">
-                                </span>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="skill-name">French (Learning)</span>
-                            <span class="skill-score">
-                                <span class="ion-ios-star score-icon">
-                                </span>
-                                <span class="ion-ios-star score-icon"></span>
-                                <span class="ion-ios-star-outline score-icon">
-                                </span>
-                                <span class="ion-ios-star-outline score-icon">
-                                </span>
-                                <span class="ion-ios-star-outline score-icon">
-                                </span>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        
-        
-        <footer>
-            <h2>Contact</h2>
-<!--            <hr>-->
-            
-            <div>
-                <ul class="footer-nav">
-                    <li><a href="#">LinkedIn</a></li>
-                    <li><a href="#">GitHub</a></li>
-                    <li><a href="#">Gmail</a></li>
-                </ul>
-            </div>
-                
-        </footer>
-        
-    </body>
+            <li>
+              <span class="skill-name">Kotlin</span>
+              <span class="skill-score">
+                <span class="ion-ios-star score-icon"> </span>
+                <span class="ion-ios-star-half score-icon"></span>
+                <span class="ion-ios-star-outline score-icon"> </span>
+                <span class="ion-ios-star-outline score-icon"> </span>
+                <span class="ion-ios-star-outline score-icon"> </span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <hr />
+      <h3>Tools & Frameworks</h3>
+      <div class="tools-and-frameworks skill-subsection clearfix">
+        <div class="col span-4-of-8 skill-column-1">
+          <ul class="no-list-style">
+            <li>
+              <span class="skill-name">Git</span>
+            </li>
+            <li>
+              <span class="skill-name">Subversion</span>
+            </li>
+            <li>
+              <span class="skill-name">JIRA</span>
+            </li>
+            <li>
+              <span class="skill-name">Polarion</span>
+            </li>
+            <li>
+              <span class="skill-name">Scitools Understand</span>
+            </li>
+            <li>
+              <span class="skill-name">Tessy 4.0</span>
+            </li>
+            <li>
+              <span class="skill-name">WireShark</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col span-4-of-8 skill-column-2">
+          <ul class="no-list-style">
+            <li>
+              <span class="skill-name">Blender</span>
+            </li>
+            <li>
+              <span class="skill-name">Autodesk Maya</span>
+            </li>
+            <li>
+              <span class="skill-name">Visual Studio</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <hr />
+      <h3>Natural Languages</h3>
+      <div class="natural-languages skill-subsection clearfix">
+        <div class="col span-4-of-8 skill-column-1">
+          <ul class="no-list-style">
+            <li>
+              <span class="skill-name">Tamil (Mothertongue)</span>
+              <span class="skill-score">
+                <span class="ion-ios-star score-icon"> </span>
+                <span class="ion-ios-star score-icon"></span>
+                <span class="ion-ios-star score-icon"> </span>
+                <span class="ion-ios-star-outline score-icon"> </span>
+                <span class="ion-ios-star-outline score-icon"> </span>
+              </span>
+            </li>
+            <li>
+              <span class="skill-name">Hindi</span>
+              <span class="skill-score">
+                <span class="ion-ios-star score-icon"> </span>
+                <span class="ion-ios-star score-icon"></span>
+                <span class="ion-ios-star score-icon"> </span>
+                <span class="ion-ios-star score-icon"> </span>
+                <span class="ion-ios-star-outline score-icon"> </span>
+              </span>
+            </li>
+            <li>
+              <span class="skill-name">Marathi</span>
+              <span class="skill-score">
+                <span class="ion-ios-star score-icon"> </span>
+                <span class="ion-ios-star score-icon"></span>
+                <span class="ion-ios-star score-icon"> </span>
+                <span class="ion-ios-star score-icon"> </span>
+                <span class="ion-ios-star-outline score-icon"> </span>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="col span-4-of-8 skill-column-2">
+          <ul class="no-list-style">
+            <li>
+              <span class="skill-name">English</span>
+              <span class="skill-score">
+                <span class="ion-ios-star score-icon"> </span>
+                <span class="ion-ios-star score-icon"></span>
+                <span class="ion-ios-star score-icon"> </span>
+                <span class="ion-ios-star score-icon"> </span>
+                <span class="ion-ios-star score-icon"> </span>
+              </span>
+            </li>
+            <li>
+              <span class="skill-name">French</span>
+              <span class="skill-score">
+                <span class="ion-ios-star score-icon"> </span>
+                <span class="ion-ios-star score-icon"></span>
+                <span class="ion-ios-star-outline score-icon"> </span>
+                <span class="ion-ios-star-outline score-icon"> </span>
+                <span class="ion-ios-star-outline score-icon"> </span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <h2>Contact</h2>
+      <!--            <hr>-->
+
+      <div>
+        <ul class="footer-nav">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/vishwanath-raman-319230b4"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/vraman3"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </li>
+          <!-- <li><a href="#">Gmail</a></li> -->
+        </ul>
+      </div>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
