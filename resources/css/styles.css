@@ -202,7 +202,7 @@ header {
 }
 
 .card {
-  flex: 0 1 24%;
+  flex: 0 1 25%;
 }
 
 .vertical-nav {
@@ -264,8 +264,9 @@ header {
   transition: all 0.5s ease;
   opacity: 0;
   display: none;
-  position: absolute;
-  left: 80px;
+  /* position: absolute;
+  left: 80px; */
+  margin-left: 100%;
   min-width: 200px;
   margin: 0;
   padding: 0;
