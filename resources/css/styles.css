@@ -178,6 +178,19 @@ header {
   text-align: justify;
 } */
 
+.aboutme-nav {
+  display: inline-block;
+}
+
+.aboutme-cards {
+  display: inline-block;
+}
+
+.container-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
 .vertical-nav {
   display: flex;
   flex-direction: column;
