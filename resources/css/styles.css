@@ -178,17 +178,31 @@ header {
   text-align: justify;
 } */
 
+.aboutme {
+  display: flex;
+}
 .aboutme-nav {
-  display: inline-block;
+  display: flex;
+  flex-grow: 1;
 }
 
 .aboutme-cards {
-  display: inline-block;
+  display: flex;
+  flex-grow: 9;
 }
 
-.container-cards {
+.testFlex {
+  display: flex;
+}
+.cards-container {
   display: flex;
   justify-content: space-between;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.card {
+  flex: 0 1 24%;
 }
 
 .vertical-nav {
@@ -199,7 +213,7 @@ header {
   margin: 0;
   padding: 0;
   height: 100vh;
-  width: 80px;
+  width: 100%;
 }
 
 .vertical-nav li {
