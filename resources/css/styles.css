@@ -250,7 +250,7 @@ header {
   transition: all 0.2s ease;
 }
 
-.vertical-nav li:hover > .onclick-list,
+/* .vertical-nav li:hover > .onclick-list,
 .vertical-nav li:focus-within > .onclick-list {
   visibility: visible;
   opacity: 1;
@@ -264,15 +264,15 @@ header {
   transition: all 0.5s ease;
   opacity: 0;
   display: none;
-  /* position: absolute;
-  left: 80px; */
+  position: absolute;
+  left: 80px;
   margin-left: 100%;
   min-width: 200px;
   margin: 0;
   padding: 0;
   top: 0;
   box-shadow: 0 0 40px #00000021;
-}
+} */
 /************************************************/
 /************* Section 3 - Projects *************/
 /************************************************/
