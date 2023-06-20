@@ -202,7 +202,16 @@ header {
 }
 
 .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 0 1 25%;
+  height: 20%;
+}
+
+.card:hover {
+  background: #fafafa;
+  transition: all 0.2s ease;
 }
 
 .vertical-nav {
