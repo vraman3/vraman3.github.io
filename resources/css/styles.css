@@ -189,8 +189,8 @@ header {
 .aboutme-cards {
   display: flex;
   flex-grow: 9;
-  margin: 5%;
-  border: 10px solid #080808;
+  margin-left: 5%;
+  border: 0px solid #080808;
 }
 
 .testFlex {
@@ -200,6 +200,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
   flex-grow: 1;
 }
 
@@ -209,10 +210,13 @@ header {
   align-items: center;
   flex: 0 1 25%;
   height: 20%;
+  background-color: #ff9933;
+  border-radius: 50px;
+  text-shadow: #000 -1px 1px 1px;
 }
 
 .card-item:hover {
-  background: #fafafa;
+  background: #ff8000;
   transition: all 0.2s ease;
 }
 
