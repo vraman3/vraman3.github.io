@@ -210,13 +210,18 @@ header {
   align-items: center;
   flex: 0 1 25%;
   height: 20%;
-  background-color: #ff9933;
+  background-color: #ff8000;
   border-radius: 50px;
-  text-shadow: #000 -1px 1px 1px;
+  text-shadow: #000 -0.5px 1px 1px;
 }
 
 .card-item:hover {
-  background: #ff8000;
+  background: #ff9933;
+  transition: all 0.2s ease;
+}
+
+.card-item:hover > p {
+  transform: scale(2);
   transition: all 0.2s ease;
 }
 
