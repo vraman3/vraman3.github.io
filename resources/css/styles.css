@@ -173,6 +173,7 @@ header {
 .section-aboutme {
   /*    padding: 0px 180px;*/
   height: 100%;
+  background: #e3e3e3;
 }
 /* .section-aboutme p {
   text-align: justify;
@@ -210,13 +211,13 @@ header {
   align-items: center;
   flex: 0 1 25%;
   height: 20%;
-  background-color: #ff8000;
+  background-color: #ff9933;
   border-radius: 50px;
   text-shadow: #000 -0.5px 1px 1px;
 }
 
 .card-item:hover {
-  background: #ff9933;
+  background: #ffbf80;
   transition: all 0.2s ease;
 }
 
@@ -303,7 +304,6 @@ header {
 
 .section-projects {
   /*    background: #fff;*/
-  background: #e3e3e3;
   height: 100vh;
 }
 
@@ -497,6 +497,7 @@ header {
 /************************************************/
 
 .section-experience {
+  background: #e3e3e3;
 }
 
 /* Section 5 - Skills */
@@ -505,7 +506,7 @@ header {
 /************************************************/
 
 .section-skills {
-  background: #e3e3e3;
+  /* background: #e3e3e3; */
 }
 
 ul > li .skill-name {
